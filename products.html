@@ -1,367 +1,319 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Explore SunClean's solar panel cleaning robots: Ground-mounted and rooftop cleaning robots designed to maximize solar plant efficiency."
-    />
-    <title>SunClean Products | Solar Cleaning Robots</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SunClean | Products</title>
 
-    <!-- Font Awesome Icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/style.css" />
 
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@600;700;800&display=swap"
-      rel="stylesheet"
-    />
+  <!-- Favicon -->
+  <link rel="icon" href="assets/images/loogo.png" />
 
-    <!-- Main CSS -->
-    <link rel="stylesheet" href="css/style.css" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="assets/images/logo.png" />
-  </head>
-  <body>
-    <!-- Header & Navigation -->
-    <header>
-      <div class="container">
-        <nav class="navbar">
-          <a href="index.html" class="logo">Sun<span>Clean</span></a>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+</head>
 
-          <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="products.html" class="active">Products</a></li>
-            <li><a href="technology.html">Technology</a></li>
-            <li><a href="applications.html">Applications</a></li>
-            <li><a href="why-sunclean.html">Why SunClean</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
+<body>
 
-          <button class="mobile-menu-btn">
-            <i class="fas fa-bars"></i>
-          </button>
-        </nav>
-      </div>
-    </header>
+  <!-- =========================
+       HEADER
+  ========================== -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand">
+        <img src="assets/images/loogo.png" alt="SunClean Logo" class="brand-logo" />
+      </a>
 
-    <!-- Products Hero -->
-    <section class="about-hero">
-      <div class="container">
-        <h1>Our Products</h1>
-        <p>Advanced robotic solutions for solar panel maintenance</p>
-      </div>
-    </section>
+      <nav class="nav" id="navMenu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="products.html" class="active">Products</a>
+        <a href="technology.html">Technology</a>
+        <a href="roi-value.html">ROI & Value</a>
+        <a href="clients.html">Our Clients</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
 
-    <!-- Ground Mounted Cleaning Robots -->
-    <section class="section" id="ground-mounted">
-      <div class="container">
-        <div class="product-detail">
-          <div class="section-title">
-            <h2>Ground-Mounted Solar Cleaning Robots</h2>
-          </div>
+      <button class="menu-btn" id="menuBtn" aria-label="Toggle Menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
 
-          <div class="product-detail-content">
-            <div>
-              <h3>High-Capacity Cleaning for Utility-Scale Solar Farms</h3>
-              <p>
-                Our ground-mounted solar cleaning robots are designed for
-                large-scale solar power plants with extensive panel arrays.
-                These robust machines efficiently clean thousands of panels
-                daily with minimal human intervention.
-              </p>
+  <!-- =========================
+       PAGE HERO
+  ========================== -->
+  <section
+    class="page-hero"
+    style="background:
+      linear-gradient(rgba(15, 35, 15, 0.72), rgba(20, 120, 50, 0.45)),
+      url('assets/images/sunclean1.jpeg') center/cover no-repeat;"
+  >
+    <div class="container">
+      <span class="section-badge light">Our Products</span>
+      <h1>Complete Range of Solar Cleaning Solutions</h1>
+      <p>
+        From manual-assist systems to fully autonomous robotic platforms,
+        SunClean Tech offers solutions for every scale and stage of solar operations.
+      </p>
+    </div>
+  </section>
 
-              <div class="product-features">
-                <h4>Key Features:</h4>
-                <ul class="feature-list">
-                  <li>Automated navigation across solar arrays</li>
-                  <li>Water-efficient cleaning system</li>
-                  <li>Weather-resistant construction</li>
-                  <li>Remote monitoring and control</li>
-                  <li>Compatible with various panel configurations</li>
-                  <li>Self-charging capability</li>
-                </ul>
-              </div>
+  <!-- =========================
+       PRODUCTS SECTION
+  ========================== -->
+  <section class="section">
+    <div class="container">
 
-              <div style="margin-top: 30px">
-                <a href="contact.html" class="btn">Request Specifications</a>
-                <a
-                  href="applications.html"
-                  class="btn btn-secondary"
-                  style="margin-left: 20px"
-                  >View Applications</a
-                >
-              </div>
-            </div>
-
-            <div class="about-img">
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTExfMGgoZJ0SC5uObr6P1AIzCA5Qme1j8pLA&s"
-                alt="Ground-Mounted Solar Cleaning Robot"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Rooftop Cleaning Robots -->
-    <section class="section" style="background-color: #f9f9f9" id="rooftop">
-      <div class="container">
-        <div class="product-detail">
-          <div class="section-title">
-            <h2>Rooftop Solar Cleaning Robots</h2>
-          </div>
-
-          <div class="product-detail-content">
-            <div class="about-img">
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTExfMGgoZJ0SC5uObr6P1AIzCA5Qme1j8pLA&s"
-                alt="Rooftop Solar Cleaning Robot"
-              />
-            </div>
-
-            <div>
-              <h3>Compact & Efficient Rooftop Solutions</h3>
-              <p>
-                Designed specifically for commercial and industrial rooftop
-                solar installations, our rooftop cleaning robots provide safe,
-                automated cleaning without the need for manual labor on elevated
-                structures.
-              </p>
-
-              <div class="product-features">
-                <h4>Key Features:</h4>
-                <ul class="feature-list">
-                  <li>Lightweight yet durable construction</li>
-                  <li>Anti-fall safety mechanisms</li>
-                  <li>Low water consumption system</li>
-                  <li>Easy installation and setup</li>
-                  <li>Scheduled cleaning capability</li>
-                  <li>Solar-powered operation</li>
-                </ul>
-              </div>
-
-              <div style="margin-top: 30px">
-                <a href="contact.html" class="btn">Get Pricing Details</a>
-                <a
-                  href="technology.html"
-                  class="btn btn-secondary"
-                  style="margin-left: 20px"
-                  >Our Technology</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Automated Maintenance Systems -->
-    <section class="section">
-      <div class="container">
-        <div class="product-detail">
-          <div class="section-title">
-            <h2>Automated Solar Maintenance Systems</h2>
-          </div>
-
-          <div class="product-detail-content">
-            <div>
-              <h3>Complete Solar Plant Maintenance Solutions</h3>
-              <p>
-                Beyond cleaning robots, SunClean offers integrated maintenance
-                systems that include monitoring, diagnostics, and optimization
-                tools for comprehensive solar plant management.
-              </p>
-
-              <div class="product-features">
-                <h4>System Components:</h4>
-                <ul class="feature-list">
-                  <li>Central control and monitoring software</li>
-                  <li>Performance analytics dashboard</li>
-                  <li>Predictive maintenance alerts</li>
-                  <li>Customizable cleaning schedules</li>
-                  <li>Efficiency reporting tools</li>
-                  <li>Mobile app for remote management</li>
-                </ul>
-              </div>
-
-              <div style="margin-top: 30px">
-                <a href="contact.html" class="btn">Request a Demo</a>
-                <a
-                  href="why-sunclean.html"
-                  class="btn btn-secondary"
-                  style="margin-left: 20px"
-                  >Why Choose Us</a
-                >
-              </div>
-            </div>
-
-            <div class="about-img">
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTExfMGgoZJ0SC5uObr6P1AIzCA5Qme1j8pLA&s"
-                alt="Automated Solar Maintenance System"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Product Comparison/Summary -->
-    <section
-      class="section"
-      style="background-color: var(--primary-blue); color: white"
-    >
-      <div class="container">
-        <div class="section-title">
-          <h2 style="color: white">Product Comparison</h2>
-        </div>
-
-        <div class="card-grid">
-          <div class="card">
-            <div class="card-content" style="text-align: center">
-              <h3 style="color: var(--primary-blue)">Ground-Mounted Robots</h3>
-              <p style="color: #000">
-                <strong>Best for:</strong> Utility-scale solar farms
-              </p>
-              <p style="color: #000">
-                <strong>Coverage:</strong> 1,000+ panels per day
-              </p>
-              <p style="color: #000">
-                <strong>Key Benefit:</strong> Maximum efficiency for large
-                installations
-              </p>
-              <a href="#ground-mounted" class="btn" style="margin-top: 15px"
-                >Learn More</a
-              >
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-content" style="text-align: center">
-              <h3 style="color: var(--primary-blue)">Rooftop Robots</h3>
-              <p style="color: #000">
-                <strong>Best for:</strong> Commercial/industrial rooftops
-              </p>
-              <p style="color: #000">
-                <strong>Coverage:</strong> 200-500 panels per day
-              </p>
-              <p style="color: #000">
-                <strong>Key Benefit:</strong> Safe, automated rooftop cleaning
-              </p>
-              <a href="#rooftop" class="btn" style="margin-top: 15px"
-                >Learn More</a
-              >
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-content" style="text-align: center">
-              <h3 style="color: var(--primary-blue)">Maintenance Systems</h3>
-              <p style="color: #000">
-                <strong>Best for:</strong> Complete plant management
-              </p>
-              <p style="color: #000">
-                <strong>Coverage:</strong> Entire solar facility
-              </p>
-              <p style="color: #000">
-                <strong>Key Benefit:</strong> Integrated monitoring &
-                optimization
-              </p>
-              <a href="contact.html" class="btn" style="margin-top: 15px"
-                >Request Info</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Call to Action -->
-    <section class="section" style="text-align: center">
-      <div class="container">
-        <h2>Find the Right Solution for Your Solar Plant</h2>
-        <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto 40px">
-          Our team can help you select the perfect SunClean product based on
-          your specific requirements, installation type, and budget.
+      <div class="section-heading">
+        <span class="section-badge">Product Lineup</span>
+        <h2>Our Product Portfolio</h2>
+        <p>
+          Each product is designed to solve specific operational challenges,
+          ensuring maximum efficiency, reliability, and measurable return on investment.
         </p>
-        <a href="contact.html" class="btn">Get a Custom Quote</a>
-        <a
-          href="applications.html"
-          class="btn btn-secondary"
-          style="margin-left: 20px"
-          >View Case Studies</a
-        >
       </div>
-    </section>
 
-    <!-- Footer -->
-    <footer>
-      <div class="container">
-        <div class="footer-content">
-          <div class="footer-about">
-            <div class="footer-logo">Sun<span>Clean</span></div>
-            <p>
-              We are manufacturers of solar panel cleaning robots for
-              ground-mounted and rooftop solar plants. Our machines are
-              essential for dust cleaning on solar panels and help increase the
-              efficiency of solar power plants.
-            </p>
-            <p><strong>Industry:</strong> Solar Industry</p>
-            <p>
-              <strong>Domain:</strong>
-              <a href="https://sunclean.in/">https://sunclean.in/</a>
-            </p>
-          </div>
+      <div class="grid two">
 
-          <div class="footer-links">
-            <h4>Quick Links</h4>
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about.html">About Us</a></li>
-              <li><a href="products.html">Products</a></li>
-              <li><a href="technology.html">Technology</a></li>
-              <li><a href="applications.html">Applications</a></li>
-              <li><a href="why-sunclean.html">Why SunClean</a></li>
-              <li><a href="contact.html">Contact</a></li>
-            </ul>
-          </div>
-
-          <div class="footer-contact">
-            <h4>Contact Info</h4>
-            <p>
-              <i class="fas fa-map-marker-alt"></i> Solar Manufacturing Hub,
-              Maharashtra, India
-            </p>
-            <p><i class="fas fa-phone"></i> +91 12345 67890</p>
-            <p><i class="fas fa-envelope"></i> info@sunclean.in</p>
-            <p><i class="fas fa-globe"></i> https://sunclean.in/</p>
-          </div>
+        <!-- PRODUCT 1 -->
+        <div class="product-card">
+          <img src="assets/images/sunclean9.png" alt="SunClean V1">
+          <h3>SunClean V1</h3>
+          <p class="product-tag">Manual Cleaning Support System</p>
+          <ul>
+            <li>Entry-level cleaning solution for basic operational needs</li>
+            <li>Lightweight, practical, and easy to handle</li>
+            <li>Ideal for small solar installations and pilot deployments</li>
+            <li>Cost-effective implementation with quick usability</li>
+          </ul>
         </div>
 
-        <div class="footer-bottom">
-          <p>
-            &copy; <span id="currentYear"></span> SunClean. All Rights Reserved.
-            | Solar Panel Cleaning Robots Manufacturer
-          </p>
+        <!-- PRODUCT 2 -->
+        <div class="product-card">
+          <img src="assets/images/sunclean10.jpeg" alt="SunClean V2">
+          <h3>SunClean V2</h3>
+          <p class="product-tag">Semi-Automatic Cleaning Robot</p>
+          <ul>
+            <li>Improved cleaning speed and repeatability</li>
+            <li>Reduces dependence on heavy manual labour</li>
+            <li>Provides more consistent cleaning results</li>
+            <li>Well-suited for medium-scale solar plants</li>
+          </ul>
+        </div>
+
+        <!-- PRODUCT 3 -->
+        <div class="product-card">
+          <img src="assets/images/sunclean11.png" alt="SunClean V3">
+          <h3>SunClean V3</h3>
+          <p class="product-tag">Fully Automatic Robotic System</p>
+          <ul>
+            <li>Fully automated cleaning with minimal supervision</li>
+            <li>High cleaning coverage with optimized performance</li>
+            <li>Reduces operational downtime and labour dependency</li>
+            <li>Designed for large-scale and performance-driven plants</li>
+          </ul>
+        </div>
+
+        <!-- PRODUCT 4 -->
+        <div class="product-card">
+          <img src="assets/images/sunclean12.jpeg" alt="SunClean V4">
+          <h3>SunClean V4</h3>
+          <p class="product-tag">Robotic Vehicle on Track</p>
+          <ul>
+            <li>Advanced track-based movement for large plant coverage</li>
+            <li>Built for high-frequency and repeatable operations</li>
+            <li>Optimized for large utility-scale solar environments</li>
+            <li>Delivers maximum efficiency and energy output support</li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================
+       PRODUCT HIGHLIGHTS
+  ========================== -->
+  <section class="section alt-bg">
+    <div class="container">
+
+      <div class="section-heading">
+        <span class="section-badge">Why These Products</span>
+        <h2>Built for Real Solar Conditions</h2>
+        <p>
+          SunClean solutions are engineered for dust-intensive, large-scale, and operationally demanding solar environments.
+        </p>
+      </div>
+
+      <div class="grid four">
+        <div class="info-card">
+          <i class="fas fa-solar-panel"></i>
+          <h3>Plant-Focused Design</h3>
+          <p>Solutions built specifically for ground-mounted and commercial solar assets.</p>
+        </div>
+
+        <div class="info-card">
+          <i class="fas fa-water"></i>
+          <h3>Water-Efficient</h3>
+          <p>Designed to support dry or reduced-water cleaning strategies where required.</p>
+        </div>
+
+        <div class="info-card">
+          <i class="fas fa-gear"></i>
+          <h3>Reliable Operation</h3>
+          <p>Consistent cleaning performance across repetitive operational cycles.</p>
+        </div>
+
+        <div class="info-card">
+          <i class="fas fa-chart-line"></i>
+          <h3>ROI Driven</h3>
+          <p>Supports better energy yield and lower maintenance effort over time.</p>
         </div>
       </div>
-    </footer>
 
-    <!-- JavaScript -->
-    <script src="js/script.js"></script>
+    </div>
+  </section>
 
-    <script>
-      // Set current year in footer
-      document.getElementById("currentYear").textContent =
-        new Date().getFullYear();
-    </script>
-  </body>
+  <!-- =========================
+       COMPARISON TABLE
+  ========================== -->
+  <section class="section">
+    <div class="container">
+
+      <div class="section-heading">
+        <span class="section-badge">Comparison</span>
+        <h2>Product Comparison</h2>
+        <p>
+          Compare our product range based on automation, efficiency, and operational suitability.
+        </p>
+      </div>
+
+      <div class="table-wrapper">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>V1</th>
+              <th>V2</th>
+              <th>V3</th>
+              <th>V4</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Automation Level</td>
+              <td>Manual</td>
+              <td>Semi-Automatic</td>
+              <td>Automatic</td>
+              <td>Fully Automatic</td>
+            </tr>
+            <tr>
+              <td>Best For</td>
+              <td>Small Plants</td>
+              <td>Medium Scale</td>
+              <td>Large Plants</td>
+              <td>Utility Scale</td>
+            </tr>
+            <tr>
+              <td>Efficiency</td>
+              <td>Basic</td>
+              <td>Improved</td>
+              <td>High</td>
+              <td>Very High</td>
+            </tr>
+            <tr>
+              <td>Human Effort</td>
+              <td>High</td>
+              <td>Moderate</td>
+              <td>Low</td>
+              <td>Very Low</td>
+            </tr>
+            <tr>
+              <td>Operational Consistency</td>
+              <td>Low</td>
+              <td>Medium</td>
+              <td>High</td>
+              <td>Very High</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================
+       CTA SECTION
+  ========================== -->
+  <section class="section">
+    <div class="container">
+
+      <div class="cta-box">
+        <h2>Not Sure Which Product Fits Your Plant?</h2>
+        <p>
+          Our team can help you choose the right solution based on plant size,
+          cleaning frequency, environmental conditions, and operational goals.
+        </p>
+
+        <div style="margin-top: 24px;">
+          <a href="contact.html" class="btn btn-primary">Talk to Our Experts</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <img src="assets/images/loogo.png" alt="SunClean Logo" class="footer-logo" />
+        <p>
+          SunClean Tech develops intelligent solar panel cleaning robots for
+          utility-scale and commercial solar plants.
+        </p>
+      </div>
+
+      <div>
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="technology.html">Technology</a></li>
+          <li><a href="roi-value.html">ROI & Value</a></li>
+          <li><a href="clients.html">Our Clients</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+        <p><i class="fas fa-phone"></i> +91 76666 37114</p>
+        <p><i class="fas fa-envelope"></i> sales@sunclean.in</p>
+        <p><i class="fas fa-map-marker-alt"></i> Pune, Maharashtra, India</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© <span id="currentYear"></span> SunClean Tech Private Limited. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="js/script.js"></script>
+
+</body>
 </html>
