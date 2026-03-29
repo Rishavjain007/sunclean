@@ -62,6 +62,71 @@
     </div>
   </section>
 
+
+
+  <!-- =========================
+       ROI CALCULATOR
+  ========================== -->
+  <section class="section alt-bg">
+    <div class="container">
+      <div class="section-heading">
+        <span class="section-badge">Interactive Tool</span>
+        <h2>Simple ROI Estimator</h2>
+        <p>
+          Use this quick estimator to understand the possible business value of
+          switching to robotic cleaning.
+        </p>
+      </div>
+
+      <div class="calculator-box">
+        <div class="calculator-grid">
+
+          <div class="calc-field">
+            <label for="plantSize">Plant Size (MW)</label>
+            <input type="number" id="plantSize" placeholder="e.g. 10" />
+          </div>
+
+          <div class="calc-field">
+            <label for="manualCost">Monthly Manual Cleaning Cost (₹)</label>
+            <input type="number" id="manualCost" placeholder="e.g. 150000" />
+          </div>
+
+          <div class="calc-field">
+            <label for="cleaningFreq">Cleanings Per Month</label>
+            <input type="number" id="cleaningFreq" placeholder="e.g. 8" />
+          </div>
+
+          <div class="calc-field">
+            <label for="yieldLoss">Estimated Soiling Loss (%)</label>
+            <input type="number" id="yieldLoss" placeholder="e.g. 4" />
+          </div>
+
+        </div>
+
+        <div class="calculator-action">
+          <button class="btn btn-primary" id="calculateROI">Calculate ROI Impact</button>
+        </div>
+
+        <div class="calculator-result" id="roiResult">
+          <div class="result-card">
+            <h3>Estimated Annual Manual Cleaning Cost</h3>
+            <p id="annualManualCost">₹ 0</p>
+          </div>
+
+          <div class="result-card">
+            <h3>Potential Cleaning Optimization Value</h3>
+            <p id="optimizationValue">₹ 0</p>
+          </div>
+
+          <div class="result-card">
+            <h3>Indicative Business Impact</h3>
+            <p id="businessImpact">Enter your values to estimate</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- =========================
        INTRO VALUE
   ========================== -->
@@ -189,68 +254,7 @@
     </div>
   </section>
 
-  <!-- =========================
-       ROI CALCULATOR
-  ========================== -->
-  <section class="section alt-bg">
-    <div class="container">
-      <div class="section-heading">
-        <span class="section-badge">Interactive Tool</span>
-        <h2>Simple ROI Estimator</h2>
-        <p>
-          Use this quick estimator to understand the possible business value of
-          switching to robotic cleaning.
-        </p>
-      </div>
-
-      <div class="calculator-box">
-        <div class="calculator-grid">
-
-          <div class="calc-field">
-            <label for="plantSize">Plant Size (MW)</label>
-            <input type="number" id="plantSize" placeholder="e.g. 10" />
-          </div>
-
-          <div class="calc-field">
-            <label for="manualCost">Monthly Manual Cleaning Cost (₹)</label>
-            <input type="number" id="manualCost" placeholder="e.g. 150000" />
-          </div>
-
-          <div class="calc-field">
-            <label for="cleaningFreq">Cleanings Per Month</label>
-            <input type="number" id="cleaningFreq" placeholder="e.g. 8" />
-          </div>
-
-          <div class="calc-field">
-            <label for="yieldLoss">Estimated Soiling Loss (%)</label>
-            <input type="number" id="yieldLoss" placeholder="e.g. 4" />
-          </div>
-
-        </div>
-
-        <div class="calculator-action">
-          <button class="btn btn-primary" id="calculateROI">Calculate ROI Impact</button>
-        </div>
-
-        <div class="calculator-result" id="roiResult">
-          <div class="result-card">
-            <h3>Estimated Annual Manual Cleaning Cost</h3>
-            <p id="annualManualCost">₹ 0</p>
-          </div>
-
-          <div class="result-card">
-            <h3>Potential Cleaning Optimization Value</h3>
-            <p id="optimizationValue">₹ 0</p>
-          </div>
-
-          <div class="result-card">
-            <h3>Indicative Business Impact</h3>
-            <p id="businessImpact">Enter your values to estimate</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  
 
   <!-- =========================
        LONG TERM VALUE

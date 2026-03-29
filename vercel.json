@@ -1,0 +1,14 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/", "destination": "/index.html" },
+    { "source": "/about", "destination": "/about.html" },
+    { "source": "/products", "destination": "/products.html" },
+    { "source": "/technology", "destination": "/technology.html" },
+    { "source": "/roi-value", "destination": "/roi-value.html" },
+    { "source": "/clients", "destination": "/clients.html" },
+    { "source": "/contact", "destination": "/contact.html" },
+    { "source": "/applications", "destination": "/applications.html" },
+    { "source": "/why-sunclean", "destination": "/why-sunclean.html" }
+  ]
+}
