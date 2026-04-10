@@ -1,351 +1,407 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SunClean | ROI & Value</title>
-  <meta name="description" content="Understand the ROI, savings, and long-term value of SunClean robotic solar panel cleaning systems." />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SunClean | ROI & Value</title>
+    <meta
+      name="description"
+      content="Understand the ROI, savings, and long-term value of SunClean robotic solar panel cleaning systems."
+    />
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="css/style.css" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="assets/images/android-chrome-192x192.png" />
-</head>
-<body>
-
-  <!-- =========================
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="assets/images/android-chrome-192x192.png"
+    />
+  </head>
+  <body>
+    <!-- =========================
        HEADER
   ========================== -->
-  <header class="header">
-    <div class="container nav-container">
-      <a href="index.html" class="brand">
-        <img src="assets/images/loogo.png" alt="SunClean Logo" class="brand-logo" />
-      </a>
+    <header class="header">
+      <div class="container nav-container">
+        <a href="index.html" class="brand">
+          <img
+            src="assets/images/loogo.png"
+            alt="SunClean Logo"
+            class="brand-logo"
+          />
+        </a>
 
-      <nav class="nav" id="navMenu">
-        <a href="index.html">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="products.html">Products</a>
-        <a href="technology.html">Technology</a>
-        <a href="roi-value.html" class="active">ROI & Value</a>
-        <a href="clients.html">Our Clients</a>
-        <a href="contact.html">Contact Us</a>
-      </nav>
+        <nav class="nav" id="navMenu">
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="products.html">Products</a>
+          <a href="technology.html">Technology</a>
+          <a href="roi-value.html" class="active">ROI & Value</a>
+          <a href="clients.html">Our Clients</a>
+          <a href="contact.html">Contact Us</a>
+        </nav>
 
-      <button class="menu-btn" id="menuBtn" aria-label="Toggle Menu">
-        <i class="fas fa-bars"></i>
-      </button>
-    </div>
-  </header>
+        <button class="menu-btn" id="menuBtn" aria-label="Toggle Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </header>
 
-  <!-- =========================
+    <!-- =========================
        HERO
   ========================== -->
-  <section class="page-hero" style="background-image: linear-gradient(rgba(9, 24, 55, 0.72), rgba(9, 24, 55, 0.72)), url('assets/images/sunclean4.jpeg');">
-    <div class="container">
-      <span class="section-badge light">ROI & Business Impact</span>
-      <h1>Cleaning Is Not a Cost. It’s a Performance Multiplier.</h1>
-      <p>
-        Robotic solar panel cleaning is not just about reducing manual work.
-        It is about protecting generation, reducing losses, and improving the
-        long-term profitability of your solar asset.
-      </p>
-    </div>
-  </section>
+    <section
+      class="page-hero"
+      style="
+        background-image:
+          linear-gradient(rgba(9, 24, 55, 0.72), rgba(9, 24, 55, 0.72)),
+          url(&quot;assets/images/sunclean4.jpeg&quot;);
+      "
+    >
+      <div class="container">
+        <span class="section-badge light">ROI & Business Impact</span>
+        <h1>Cleaning Is Not a Cost. It’s a Performance Multiplier.</h1>
+        <p>
+          Robotic solar panel cleaning is not just about reducing manual work.
+          It is about protecting generation, reducing losses, and improving the
+          long-term profitability of your solar asset.
+        </p>
+      </div>
+    </section>
 
-
-
-  <!-- =========================
+    <!-- =========================
        ROI CALCULATOR
   ========================== -->
-  <section class="section alt-bg">
-    <div class="container">
-      <div class="section-heading">
-        <span class="section-badge">Interactive Tool</span>
-        <h2>Simple ROI Estimator</h2>
-        <p>
-          Use this quick estimator to understand the possible business value of
-          switching to robotic cleaning.
-        </p>
+    <section class="section alt-bg">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-badge">Interactive Tool</span>
+          <h2>Simple ROI Estimator</h2>
+          <p>
+            Use this quick estimator to understand the possible business value
+            of switching to robotic cleaning.
+          </p>
+        </div>
+
+        <div class="calculator-box">
+          <div class="calculator-grid">
+            <div class="calc-field">
+              <label for="plantSize">Plant Size (MW)</label>
+              <input type="number" id="plantSize" placeholder="e.g. 10" />
+            </div>
+
+            <div class="calc-field">
+              <label for="manualCost">Monthly Manual Cleaning Cost (₹)</label>
+              <input type="number" id="manualCost" placeholder="e.g. 150000" />
+            </div>
+
+            <div class="calc-field">
+              <label for="cleaningFreq">Cleanings Per Month</label>
+              <input type="number" id="cleaningFreq" placeholder="e.g. 8" />
+            </div>
+
+            <div class="calc-field">
+              <label for="yieldLoss">Estimated Soiling Loss (%)</label>
+              <input type="number" id="yieldLoss" placeholder="e.g. 4" />
+            </div>
+          </div>
+
+          <div class="calculator-action">
+            <button class="btn btn-primary" id="calculateROI">
+              Calculate ROI Impact
+            </button>
+          </div>
+
+          <div class="calculator-result" id="roiResult">
+            <div class="result-card">
+              <h3>Estimated Annual Manual Cleaning Cost</h3>
+              <p id="annualManualCost">₹ 0</p>
+            </div>
+
+            <div class="result-card">
+              <h3>Potential Cleaning Optimization Value</h3>
+              <p id="optimizationValue">₹ 0</p>
+            </div>
+
+            <div class="result-card">
+              <h3>Indicative Business Impact</h3>
+              <p id="businessImpact">Enter your values to estimate</p>
+            </div>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="calculator-box">
-        <div class="calculator-grid">
-
-          <div class="calc-field">
-            <label for="plantSize">Plant Size (MW)</label>
-            <input type="number" id="plantSize" placeholder="e.g. 10" />
-          </div>
-
-          <div class="calc-field">
-            <label for="manualCost">Monthly Manual Cleaning Cost (₹)</label>
-            <input type="number" id="manualCost" placeholder="e.g. 150000" />
-          </div>
-
-          <div class="calc-field">
-            <label for="cleaningFreq">Cleanings Per Month</label>
-            <input type="number" id="cleaningFreq" placeholder="e.g. 8" />
-          </div>
-
-          <div class="calc-field">
-            <label for="yieldLoss">Estimated Soiling Loss (%)</label>
-            <input type="number" id="yieldLoss" placeholder="e.g. 4" />
-          </div>
-
-        </div>
-
-        <div class="calculator-action">
-          <button class="btn btn-primary" id="calculateROI">Calculate ROI Impact</button>
-        </div>
-
-        <div class="calculator-result" id="roiResult">
-          <div class="result-card">
-            <h3>Estimated Annual Manual Cleaning Cost</h3>
-            <p id="annualManualCost">₹ 0</p>
-          </div>
-
-          <div class="result-card">
-            <h3>Potential Cleaning Optimization Value</h3>
-            <p id="optimizationValue">₹ 0</p>
-          </div>
-
-          <div class="result-card">
-            <h3>Indicative Business Impact</h3>
-            <p id="businessImpact">Enter your values to estimate</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- =========================
+    <!-- =========================
        INTRO VALUE
   ========================== -->
-  <section class="section">
-    <div class="container split">
-      <div class="split-text">
-        <span class="section-badge">Value Creation</span>
-        <h2>Where the Real Value Comes From</h2>
-        <p>
-          Dust, dirt, and surface contamination directly reduce solar panel efficiency.
-          When cleaning is delayed, inconsistent, or dependent on labour availability,
-          plant performance suffers.
-        </p>
-        <p>
-          SunClean Tech helps plant owners and operators improve value through:
-        </p>
+    <section class="section">
+      <div class="container split">
+        <div class="split-text">
+          <span class="section-badge">Value Creation</span>
+          <h2>Where the Real Value Comes From</h2>
+          <p>
+            Dust, dirt, and surface contamination directly reduce solar panel
+            efficiency. When cleaning is delayed, inconsistent, or dependent on
+            labour availability, plant performance suffers.
+          </p>
+          <p>
+            SunClean Tech helps plant owners and operators improve value
+            through:
+          </p>
 
-        <div class="feature-list">
-          <div><i class="fas fa-angle-right"></i> Better cleaning frequency</div>
-          <div><i class="fas fa-angle-right"></i> Reduced energy generation losses</div>
-          <div><i class="fas fa-angle-right"></i> Lower labour dependency</div>
-          <div><i class="fas fa-angle-right"></i> Reduced operational inconsistency</div>
-          <div><i class="fas fa-angle-right"></i> Smarter long-term O&M economics</div>
+          <div class="feature-list">
+            <div>
+              <i class="fas fa-angle-right"></i> Better cleaning frequency
+            </div>
+            <div>
+              <i class="fas fa-angle-right"></i> Reduced energy generation
+              losses
+            </div>
+            <div>
+              <i class="fas fa-angle-right"></i> Lower labour dependency
+            </div>
+            <div>
+              <i class="fas fa-angle-right"></i> Reduced operational
+              inconsistency
+            </div>
+            <div>
+              <i class="fas fa-angle-right"></i> Smarter long-term O&M economics
+            </div>
+          </div>
+        </div>
+
+        <div class="split-image">
+          <img src="assets/images/sunclean5.png" alt="SunClean ROI Value" />
         </div>
       </div>
+    </section>
 
-      <div class="split-image">
-        <img src="assets/images/sunclean5.png" alt="SunClean ROI Value" />
-      </div>
-    </div>
-  </section>
-
-  <!-- =========================
+    <!-- =========================
        ROI PILLARS
   ========================== -->
-  <section class="section alt-bg">
-    <div class="container">
-      <div class="section-heading">
-        <span class="section-badge">ROI Drivers</span>
-        <h2>How SunClean Improves Plant Economics</h2>
+    <section class="section alt-bg">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-badge">ROI Drivers</span>
+          <h2>How SunClean Improves Plant Economics</h2>
+        </div>
+
+        <div class="grid four">
+          <div class="info-card">
+            <i class="fas fa-bolt"></i>
+            <h3>Improved Energy Yield</h3>
+            <p>
+              Cleaner modules allow better solar exposure, helping reduce
+              avoidable generation losses caused by soiling.
+            </p>
+          </div>
+
+          <div class="info-card">
+            <i class="fas fa-users-slash"></i>
+            <h3>Reduced Labour Dependency</h3>
+            <p>
+              Lower reliance on repetitive manual cleaning teams improves
+              operational consistency and planning.
+            </p>
+          </div>
+
+          <div class="info-card">
+            <i class="fas fa-droplet"></i>
+            <h3>Water Savings</h3>
+            <p>
+              Depending on the model used, robotic cleaning can significantly
+              reduce water consumption versus traditional cleaning methods.
+            </p>
+          </div>
+
+          <div class="info-card">
+            <i class="fas fa-chart-line"></i>
+            <h3>Better O&M Efficiency</h3>
+            <p>
+              A repeatable cleaning process helps improve long-term plant
+              management and operational discipline.
+            </p>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="grid four">
-        <div class="info-card">
-          <i class="fas fa-bolt"></i>
-          <h3>Improved Energy Yield</h3>
-          <p>
-            Cleaner modules allow better solar exposure, helping reduce avoidable
-            generation losses caused by soiling.
-          </p>
-        </div>
-
-        <div class="info-card">
-          <i class="fas fa-users-slash"></i>
-          <h3>Reduced Labour Dependency</h3>
-          <p>
-            Lower reliance on repetitive manual cleaning teams improves operational
-            consistency and planning.
-          </p>
-        </div>
-
-        <div class="info-card">
-          <i class="fas fa-droplet"></i>
-          <h3>Water Savings</h3>
-          <p>
-            Depending on the model used, robotic cleaning can significantly reduce
-            water consumption versus traditional cleaning methods.
-          </p>
-        </div>
-
-        <div class="info-card">
-          <i class="fas fa-chart-line"></i>
-          <h3>Better O&M Efficiency</h3>
-          <p>
-            A repeatable cleaning process helps improve long-term plant management
-            and operational discipline.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- =========================
+    <!-- =========================
        ROI EXAMPLES
   ========================== -->
-  <section class="section">
-    <div class="container">
-      <div class="section-heading">
-        <span class="section-badge">Illustrative Examples</span>
-        <h2>Where ROI Can Be Realized</h2>
-        <p>
-          Every solar plant is different. But in most cases, value is created when
-          robotic cleaning helps prevent output loss and reduces recurring operational inefficiencies.
-        </p>
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-badge">Illustrative Examples</span>
+          <h2>Where ROI Can Be Realized</h2>
+          <p>
+            Every solar plant is different. But in most cases, value is created
+            when robotic cleaning helps prevent output loss and reduces
+            recurring operational inefficiencies.
+          </p>
+        </div>
+
+        <div class="grid three">
+          <div class="glass-card">
+            <div class="icon-circle"><i class="fas fa-solar-panel"></i></div>
+            <h3>Utility-Scale Plants</h3>
+            <p>
+              Even small efficiency improvements can translate into meaningful
+              annual generation gains across large MW installations.
+            </p>
+          </div>
+
+          <div class="glass-card">
+            <div class="icon-circle"><i class="fas fa-industry"></i></div>
+            <h3>Dust-Heavy Environments</h3>
+            <p>
+              In regions with frequent dust accumulation, higher cleaning
+              frequency can improve plant performance consistency.
+            </p>
+          </div>
+
+          <div class="glass-card">
+            <div class="icon-circle"><i class="fas fa-briefcase"></i></div>
+            <h3>Labour-Constrained Sites</h3>
+            <p>
+              Plants facing labour shortage or high cleaning manpower costs can
+              benefit from robotic assistance and automation.
+            </p>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="grid three">
-        <div class="glass-card">
-          <div class="icon-circle"><i class="fas fa-solar-panel"></i></div>
-          <h3>Utility-Scale Plants</h3>
-          <p>
-            Even small efficiency improvements can translate into meaningful annual
-            generation gains across large MW installations.
-          </p>
-        </div>
-
-        <div class="glass-card">
-          <div class="icon-circle"><i class="fas fa-industry"></i></div>
-          <h3>Dust-Heavy Environments</h3>
-          <p>
-            In regions with frequent dust accumulation, higher cleaning frequency
-            can improve plant performance consistency.
-          </p>
-        </div>
-
-        <div class="glass-card">
-          <div class="icon-circle"><i class="fas fa-briefcase"></i></div>
-          <h3>Labour-Constrained Sites</h3>
-          <p>
-            Plants facing labour shortage or high cleaning manpower costs can
-            benefit from robotic assistance and automation.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  
-
-  <!-- =========================
+    <!-- =========================
        LONG TERM VALUE
   ========================== -->
-  <section class="section">
-    <div class="container split">
-      <div class="split-image">
-        <img src="assets/images/sunclean7.png" alt="SunClean Long Term Value" />
-      </div>
+    <section class="section">
+      <div class="container split">
+        <div class="split-image">
+          <img
+            src="assets/images/sunclean7.png"
+            alt="SunClean Long Term Value"
+          />
+        </div>
 
-      <div class="split-text">
-        <span class="section-badge">Long-Term Value</span>
-        <h2>Built for 25-Year Asset Thinking</h2>
-        <p>
-          Solar assets are long-life infrastructure investments.
-          Short-term cleaning decisions can create long-term performance losses.
-        </p>
-        <p>
-          SunClean Tech helps operators think beyond day-to-day cleaning and focus on:
-        </p>
+        <div class="split-text">
+          <span class="section-badge">Long-Term Value</span>
+          <h2>Built for 25-Year Asset Thinking</h2>
+          <p>
+            Solar assets are long-life infrastructure investments. Short-term
+            cleaning decisions can create long-term performance losses.
+          </p>
+          <p>
+            SunClean Tech helps operators think beyond day-to-day cleaning and
+            focus on:
+          </p>
 
-        <div class="feature-list">
-          <div><i class="fas fa-angle-right"></i> Consistent performance over plant life</div>
-          <div><i class="fas fa-angle-right"></i> Smarter O&M cost planning</div>
-          <div><i class="fas fa-angle-right"></i> Scalable cleaning operations</div>
-          <div><i class="fas fa-angle-right"></i> Better operational reliability</div>
+          <div class="feature-list">
+            <div>
+              <i class="fas fa-angle-right"></i> Consistent performance over
+              plant life
+            </div>
+            <div>
+              <i class="fas fa-angle-right"></i> Smarter O&M cost planning
+            </div>
+            <div>
+              <i class="fas fa-angle-right"></i> Scalable cleaning operations
+            </div>
+            <div>
+              <i class="fas fa-angle-right"></i> Better operational reliability
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- =========================
+    <!-- =========================
        CTA
   ========================== -->
-  <section class="section alt-bg">
-    <div class="container">
-      <div class="cta-box">
-        <span class="section-badge light">Next Step</span>
-        <h2>Want a More Accurate ROI Estimate for Your Plant?</h2>
-        <p>
-          Our team can help you evaluate the right cleaning system based on your
-          plant layout, operating conditions, and O&M goals.
-        </p>
+    <section class="section alt-bg">
+      <div class="container">
+        <div class="cta-box">
+          <span class="section-badge light">Next Step</span>
+          <h2>Want a More Accurate ROI Estimate for Your Plant?</h2>
+          <p>
+            Our team can help you evaluate the right cleaning system based on
+            your plant layout, operating conditions, and O&M goals.
+          </p>
 
-        <div class="hero-buttons center">
-          <a href="products.html" class="btn btn-primary">Explore Products</a>
-          <a href="contact.html" class="btn btn-secondary">Request Consultation</a>
+          <div class="hero-buttons center">
+            <a href="products.html" class="btn btn-primary">Explore Products</a>
+            <a href="contact.html" class="btn btn-secondary"
+              >Request Consultation</a
+            >
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- =========================
+    <!-- =========================
        FOOTER
   ========================== -->
-  <footer class="footer">
-    <div class="container footer-grid">
-      <div>
-        <img src="assets/images/loogo.png" alt="SunClean Logo" class="footer-logo" />
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <img
+            src="assets/images/loogo.png"
+            alt="SunClean Logo"
+            class="footer-logo"
+          />
+          <p>
+            SunClean Tech delivers smart robotic solutions for efficient solar
+            panel cleaning. Maximizing energy output with sustainable,
+            low-maintenance operations.
+          </p>
+        </div>
+
+        <div>
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="technology.html">Technology</a></li>
+            <li><a href="roi-value.html">ROI & Value</a></li>
+            <li><a href="clients.html">Our Clients</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Contact</h4>
+          <p><i class="fas fa-phone"></i> +91 76666 37114</p>
+          <p><i class="fas fa-envelope"></i> sales@sunclean.in</p>
+          <p><i class="fas fa-map-marker-alt"></i> Pune, Maharashtra, India</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
         <p>
-          SunClean Tech develops intelligent solar panel cleaning robots for
-          utility-scale and commercial solar plants.
+          © <span id="currentYear"></span> SunClean Tech Private Limited. All
+          Rights Reserved.
         </p>
       </div>
+    </footer>
 
-      <div>
-        <h4>Quick Links</h4>
-        <ul class="footer-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="products.html">Products</a></li>
-          <li><a href="technology.html">Technology</a></li>
-          <li><a href="roi-value.html">ROI & Value</a></li>
-          <li><a href="clients.html">Our Clients</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <h4>Contact</h4>
-        <p><i class="fas fa-phone"></i> +91 76666 37114</p>
-        <p><i class="fas fa-envelope"></i> sales@sunclean.in</p>
-        <p><i class="fas fa-map-marker-alt"></i> Pune, Maharashtra, India</p>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <p>© <span id="currentYear"></span> SunClean Tech Private Limited. All Rights Reserved.</p>
-    </div>
-  </footer>
-
-  <script src="js/script.js"></script>
-</body>
+    <script src="js/script.js"></script>
+  </body>
 </html>

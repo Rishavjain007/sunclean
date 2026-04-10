@@ -1,0 +1,1141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SunClean V5 | Product Details</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="assets/images/android-chrome-192x192.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #ffffff;
+        color: #1a2a3a;
+        line-height: 1.5;
+        scroll-behavior: smooth;
+      }
+
+      .container {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+
+      /* header styles (consistent with brand) */
+      .header {
+        background: #ffffff;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.03);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        border-bottom: 1px solid #eef2f6;
+      }
+
+      .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 24px;
+        flex-wrap: wrap;
+      }
+
+      .brand-logo {
+        height: 48px;
+        width: auto;
+        object-fit: contain;
+      }
+
+      .nav {
+        display: flex;
+        gap: 28px;
+        align-items: center;
+      }
+
+      .nav a {
+        text-decoration: none;
+        font-weight: 500;
+        color: #1f2e3a;
+        transition: 0.2s;
+        font-size: 0.95rem;
+      }
+
+      .nav a:hover,
+      .nav a.active {
+        color: #f5a623;
+      }
+
+      .menu-btn {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.6rem;
+        cursor: pointer;
+      }
+
+      /* buttons */
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 28px;
+        border-radius: 40px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.25s ease;
+        font-size: 0.9rem;
+      }
+
+      .btn-primary {
+        background: #f5a623;
+        color: #1e2a2f;
+        border: none;
+        box-shadow: 0 4px 8px rgba(245, 166, 35, 0.2);
+      }
+
+      .btn-primary:hover {
+        background: #e09512;
+        transform: translateY(-2px);
+      }
+
+      .btn-secondary {
+        background: transparent;
+        border: 1.5px solid #1f2e3a;
+        color: #1f2e3a;
+      }
+
+      .btn-secondary:hover {
+        background: #f5f7f9;
+        border-color: #f5a623;
+        color: #f5a623;
+      }
+
+      /* hero product section */
+      .product-detail-hero {
+        padding: 60px 0 40px;
+        background: linear-gradient(135deg, #fefaf5 0%, #ffffff 100%);
+      }
+
+      .product-detail-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 48px;
+        align-items: start;
+      }
+
+      .product-gallery {
+        background: #fefcf8;
+        border-radius: 32px;
+        padding: 12px;
+      }
+
+      .main-product-image {
+        background: #f4f6f9;
+        border-radius: 28px;
+        overflow: hidden;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .main-product-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+        transition: transform 0.2s;
+      }
+
+      .thumbnail-row {
+        display: flex;
+        gap: 16px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .thumb {
+        width: 90px;
+        height: 90px;
+        object-fit: cover;
+        border-radius: 18px;
+        cursor: pointer;
+        border: 2px solid transparent;
+        opacity: 0.7;
+        transition: 0.2s;
+      }
+
+      .thumb.active-thumb,
+      .thumb:hover {
+        border-color: #f5a623;
+        opacity: 1;
+      }
+
+      .section-badge {
+        display: inline-block;
+        background: #fff0e0;
+        padding: 6px 14px;
+        border-radius: 40px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        color: #f5a623;
+        margin-bottom: 16px;
+      }
+
+      .product-info-box h1 {
+        font-size: 2.8rem;
+        font-weight: 800;
+        margin-bottom: 12px;
+        color: #1e2f3a;
+      }
+
+      .product-subtitle {
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: #3c5a6f;
+        margin-bottom: 20px;
+        border-left: 3px solid #f5a623;
+        padding-left: 16px;
+      }
+
+      .product-highlights {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        margin: 28px 0 24px;
+      }
+
+      .product-highlights div {
+        background: #f8fafc;
+        padding: 8px 16px;
+        border-radius: 40px;
+        font-size: 0.85rem;
+        font-weight: 500;
+      }
+
+      .product-highlights i {
+        color: #f5a623;
+        margin-right: 8px;
+      }
+
+      .product-cta-row {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin: 24px 0 32px;
+      }
+
+      .quick-spec-box {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 12px;
+        background: #f9fbfd;
+        border-radius: 28px;
+        padding: 20px;
+      }
+
+      .quick-spec-item h4 {
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: #6c7f8f;
+        text-transform: uppercase;
+      }
+
+      .quick-spec-item p {
+        font-weight: 700;
+        margin-top: 6px;
+        font-size: 0.9rem;
+      }
+
+      /* section general */
+      .section {
+        padding: 70px 0;
+      }
+
+      .alt-bg {
+        background: #fafcff;
+      }
+
+      .section-heading {
+        text-align: center;
+        max-width: 700px;
+        margin: 0 auto 48px;
+      }
+
+      .section-heading h2 {
+        font-size: 2.2rem;
+        font-weight: 800;
+        margin-bottom: 16px;
+      }
+
+      .grid {
+        display: grid;
+        gap: 32px;
+      }
+
+      .grid.four {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      }
+
+      .grid.three {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      }
+
+      .grid.two {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      }
+
+      .info-card {
+        background: white;
+        border-radius: 28px;
+        padding: 32px 24px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.03);
+        transition: 0.2s;
+        border: 1px solid #edf2f7;
+      }
+
+      .info-card i {
+        font-size: 2.4rem;
+        color: #f5a623;
+        margin-bottom: 20px;
+      }
+
+      .info-card h3 {
+        margin-bottom: 12px;
+        font-weight: 700;
+      }
+
+      .product-spec-layout {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+      }
+
+      .spec-card,
+      .benefit-card {
+        background: white;
+        border-radius: 32px;
+        padding: 36px;
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.04);
+      }
+
+      .spec-list {
+        margin-top: 24px;
+      }
+
+      .spec-row {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #eef2f8;
+        padding: 14px 0;
+      }
+
+      .spec-row span:first-child {
+        color: #5e6f7e;
+      }
+
+      .feature-list div {
+        margin: 18px 0;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .feature-list i {
+        color: #f5a623;
+        font-size: 1.2rem;
+      }
+
+      .glass-card {
+        background: white;
+        border-radius: 28px;
+        padding: 32px 24px;
+        text-align: center;
+        border: 1px solid #ecf3f9;
+      }
+
+      .icon-circle {
+        background: #fff2e6;
+        width: 70px;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        margin: 0 auto 20px;
+      }
+
+      .icon-circle i {
+        font-size: 2rem;
+        color: #f5a623;
+      }
+
+      .timeline {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .timeline-item {
+        display: flex;
+        gap: 28px;
+        margin-bottom: 40px;
+        align-items: flex-start;
+      }
+
+      .timeline-number {
+        background: #f5a623;
+        width: 48px;
+        height: 48px;
+        border-radius: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 800;
+        font-size: 1.4rem;
+        color: white;
+        flex-shrink: 0;
+      }
+
+      .timeline-content h3 {
+        margin-bottom: 8px;
+      }
+
+      .cta-box {
+        background: linear-gradient(105deg, #1e2f3a 0%, #0f212e 100%);
+        border-radius: 48px;
+        padding: 60px 48px;
+        text-align: center;
+        color: white;
+      }
+
+      .cta-box h2 {
+        font-size: 2rem;
+        margin-bottom: 16px;
+      }
+
+      .cta-box .btn-primary {
+        background: #f5a623;
+        color: #1e2a2f;
+      }
+
+      .product-card {
+        background: white;
+        border-radius: 28px;
+        overflow: hidden;
+        border: 1px solid #edf2f9;
+        transition: all 0.2s;
+        padding-bottom: 28px;
+      }
+
+      .product-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .product-card h3 {
+        margin: 20px 24px 8px;
+      }
+
+      .product-tag {
+        margin: 0 24px 20px;
+        color: #5e7e94;
+      }
+
+      .footer {
+        background: #0c1a24;
+        color: #cddfe7;
+        padding: 60px 0 24px;
+      }
+
+      .footer-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 40px;
+      }
+
+      .footer-logo {
+        height: 48px;
+        filter: brightness(0) invert(1);
+        margin-bottom: 16px;
+      }
+
+      .footer-links {
+        list-style: none;
+      }
+
+      .footer-links li {
+        margin-bottom: 12px;
+      }
+
+      .footer-links a {
+        color: #cddfe7;
+        text-decoration: none;
+      }
+
+      .footer-bottom {
+        text-align: center;
+        padding-top: 48px;
+        margin-top: 32px;
+        border-top: 1px solid #253746;
+        font-size: 0.85rem;
+      }
+
+      @media (max-width: 900px) {
+        .product-detail-grid {
+          grid-template-columns: 1fr;
+        }
+        .product-spec-layout {
+          grid-template-columns: 1fr;
+        }
+        .nav {
+          display: none;
+        }
+        .menu-btn {
+          display: block;
+        }
+        .quick-spec-box {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .section-heading h2 {
+          font-size: 1.8rem;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .container {
+          padding: 0 20px;
+        }
+        .btn {
+          padding: 10px 20px;
+        }
+        .timeline-item {
+          flex-direction: column;
+          gap: 12px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- =========================
+       HEADER
+  ========================== -->
+    <header class="header">
+      <div class="container nav-container">
+        <a href="index.html" class="brand">
+          <img
+            src="assets/images/loogo.png"
+            alt="SunClean Logo"
+            class="brand-logo"
+          />
+        </a>
+
+        <nav class="nav" id="navMenu">
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="products.html" class="active">Products</a>
+          <a href="technology.html">Technology</a>
+          <a href="roi-value.html">ROI & Value</a>
+          <a href="clients.html">Our Clients</a>
+          <a href="contact.html">Contact Us</a>
+        </nav>
+
+        <button class="menu-btn" id="menuBtn" aria-label="Toggle Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </header>
+
+        <!-- Hero Section: SunClean Handy V1 -->
+        <section class="product-detail-hero">
+          <div class="container">
+            <div class="product-detail-grid">
+              <div class="product-gallery">
+                <div class="main-product-image">
+                  <img
+                    id="mainProductImage"
+                    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'%3E%3Crect width='600' height='400' fill='%23e9ecef'/%3E%3Ctext x='180' y='210' fill='%23555' font-size='24'%3ESunClean Handy V1%3C/text%3E%3C/svg%3E"
+                    alt="SunClean Handy V1 Main"
+                  />
+                </div>
+                <div class="thumbnail-row">
+                  <img
+                    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 80'%3E%3Crect width='100' height='80' fill='%23ffd966'/%3E%3Ctext x='10' y='45' fill='%23333' font-size='12'%3Ebrush%3C/text%3E%3C/svg%3E"
+                    class="thumb active-thumb"
+                    alt="thumb brush"
+                  />
+                  <img
+                    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 80'%3E%3Crect width='100' height='80' fill='%23b0c4de'/%3E%3Ctext x='15' y='45' fill='%23333'%3Ewet%3C/text%3E%3C/svg%3E"
+                    class="thumb"
+                    alt="wet cleaning"
+                  />
+                  <img
+                    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 80'%3E%3Crect width='100' height='80' fill='%23cfe2cf'/%3E%3Ctext x='8' y='45'%3Elightweight%3C/text%3E%3C/svg%3E"
+                    class="thumb"
+                    alt="lightweight"
+                  />
+                  <img
+                    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 80'%3E%3Crect width='100' height='80' fill='%23f4c2c2'/%3E%3Ctext x='10' y='45'%3Edual%3C/text%3E%3C/svg%3E"
+                    class="thumb"
+                    alt="dual rotary"
+                  />
+                </div>
+              </div>
+              <div class="product-info-box">
+                <span class="section-badge">Entry-Level · Smart Manual</span>
+                <h1>SunClean Handy – V1</h1>
+                <p class="product-subtitle">
+                  Reliable, lightweight, cost-effective solar panel cleaning for
+                  everyday operations
+                </p>
+                <p>
+                  Engineered for small to medium-scale solar installations,
+                  SunClean Handy V1 combines dual-rotary brush technology with
+                  wet cleaning capability. Achieve consistent dust removal,
+                  improved panel efficiency, and minimal investment — ideal for
+                  rooftop and distributed solar plants.
+                </p>
+                <div class="product-highlights">
+                  <div>
+                    <i class="fas fa-check-circle"></i> Manual + Wet Cleaning
+                  </div>
+                  <div>
+                    <i class="fas fa-check-circle"></i> Dual Rotary Brushes
+                  </div>
+                  <div>
+                    <i class="fas fa-check-circle"></i> Lightweight / Portable
+                  </div>
+                  <div><i class="fas fa-check-circle"></i> Plug-and-Play</div>
+                </div>
+                <div class="product-cta-row">
+                  <a href="#" class="btn btn-primary"
+                    ><i class="fas fa-file-invoice-dollar"></i> Get Quote</a
+                  >
+                  <a href="#" class="btn btn-secondary"
+                    ><i class="fas fa-download"></i> Download Brochure</a
+                  >
+                </div>
+                <div class="quick-spec-box">
+                  <div class="quick-spec-item">
+                    <h4>Cleaning Type</h4>
+                    <p>Manual + Wet</p>
+                  </div>
+                  <div class="quick-spec-item">
+                    <h4>Brush System</h4>
+                    <p>Dual Rotary</p>
+                  </div>
+                  <div class="quick-spec-item">
+                    <h4>Power Source</h4>
+                    <p>Electric (1-Phase)</p>
+                  </div>
+                  <div class="quick-spec-item">
+                    <h4>Application</h4>
+                    <p>Rooftop / Small Plants</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Key Features (dual rotary + wet cleaning + lightweight) -->
+        <section class="section">
+          <div class="container">
+            <div class="section-heading">
+              <span class="section-badge">Core Features</span>
+              <h2>Designed for Efficient Daily Maintenance</h2>
+              <p>
+                Smart manual operation, reduced fatigue, and superior cleaning
+                results for rooftop & commercial arrays.
+              </p>
+            </div>
+            <div class="grid four">
+              <div class="info-card">
+                <i class="fas fa-exchange-alt"></i>
+                <h3>Dual-Rotary Brush System</h3>
+                <p>
+                  Uniform cleaning coverage across solar panels, removing dust &
+                  debris effectively.
+                </p>
+              </div>
+              <div class="info-card">
+                <i class="fas fa-tint"></i>
+                <h3>Wet Cleaning Mechanism</h3>
+                <p>
+                  Enhanced deep dust removal & bird dropping elimination with
+                  controlled water flow.
+                </p>
+              </div>
+              <div class="info-card">
+                <i class="fas fa-weight-hanging"></i>
+                <h3>Lightweight & Portable</h3>
+                <p>
+                  Easy handling across rooftops, reduces operator fatigue
+                  compared to traditional methods.
+                </p>
+              </div>
+              <div class="info-card">
+                <i class="fas fa-plug"></i>
+                <h3>Plug-and-Play Simplicity</h3>
+                <p>
+                  No complex installation — immediate operation with battery or
+                  external power.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Technical Specifications + Advantages (Why V1) -->
+        <section class="section alt-bg">
+          <div class="container">
+            <div class="product-spec-layout">
+              <div class="spec-card">
+                <h2>📋 Technical Specifications</h2>
+                <div class="spec-list">
+                  <div class="spec-row">
+                    <span>Cleaning Type</span
+                    ><strong>Manual + Wet Cleaning</strong>
+                  </div>
+                  <div class="spec-row">
+                    <span>Brush System</span
+                    ><strong>Dual Rotary Brushes</strong>
+                  </div>
+                  <div class="spec-row">
+                    <span>Operation Mode</span
+                    ><strong>Battery / External</strong>
+                  </div>
+                  <div class="spec-row">
+                    <span>Weight</span
+                    ><strong>Lightweight / Portable (<8 kg)</strong>
+                  </div>
+                  <div class="spec-row">
+                    <span>Water Usage</span
+                    ><strong>Controlled Flow System</strong>
+                  </div>
+                  <div class="spec-row">
+                    <span>Application</span
+                    ><strong>Rooftop / Small Solar Plants (<1 MW)</strong>
+                  </div>
+                  <div class="spec-row">
+                    <span>Power Source</span
+                    ><strong>Electric (Single Phase)</strong>
+                  </div>
+                  <div class="spec-row">
+                    <span>Panel Compatibility</span
+                    ><strong>Framed & Frameless</strong>
+                  </div>
+                </div>
+              </div>
+              <div class="benefit-card">
+                <h2>✅ Why Choose SunClean Handy – V1</h2>
+                <div class="feature-list">
+                  <div>
+                    <i class="fas fa-check-circle"></i> Lowest entry cost for
+                    solar cleaning automation journey
+                  </div>
+                  <div>
+                    <i class="fas fa-check-circle"></i> Reduces manual labor
+                    fatigue compared to traditional cleaning
+                  </div>
+                  <div>
+                    <i class="fas fa-check-circle"></i> Improves panel
+                    efficiency by removing stubborn dirt layers
+                  </div>
+                  <div>
+                    <i class="fas fa-check-circle"></i> No dependency on
+                    automation or external control systems
+                  </div>
+                  <div>
+                    <i class="fas fa-check-circle"></i> Suitable for daily /
+                    frequent cleaning cycles
+                  </div>
+                  <div>
+                    <i class="fas fa-check-circle"></i> Low maintenance and easy
+                    serviceability
+                  </div>
+                  <div>
+                    <i class="fas fa-check-circle"></i> Quick deployment without
+                    technical complexity
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- How It Works (Working Principle) -->
+        <section class="section">
+          <div class="container">
+            <div class="section-heading">
+              <span class="section-badge">Simple Workflow</span>
+              <h2>How SunClean Handy V1 Operates</h2>
+              <p>
+                Intuitive process for uniform cleaning and improved energy yield
+              </p>
+            </div>
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-number">1</div>
+                <div class="timeline-content">
+                  <h3>Position on Solar Panel</h3>
+                  <p>
+                    Operator places the lightweight system onto the panel
+                    surface securely.
+                  </p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-number">2</div>
+                <div class="timeline-content">
+                  <h3>Plug & Activate Brushes</h3>
+                  <p>
+                    Plug-and-play mechanism activates dual rotating brushes
+                    instantly.
+                  </p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-number">3</div>
+                <div class="timeline-content">
+                  <h3>Controlled Wet Cleaning</h3>
+                  <p>
+                    Integrated water flow system enables efficient wet cleaning
+                    for deep dust removal.
+                  </p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-number">4</div>
+                <div class="timeline-content">
+                  <h3>Manual Movement / Full Coverage</h3>
+                  <p>
+                    User guides the device across rows to remove dust, droppings
+                    & debris.
+                  </p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-number">5</div>
+                <div class="timeline-content">
+                  <h3>Outcome: Improved Yield</h3>
+                  <p>
+                    Uniform cleaning with minimal effort, boosting daily energy
+                    output.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              style="text-align: center; margin-top: 20px; font-style: italic"
+            >
+              👉 Uniform cleaning with minimal effort and improved energy yield.
+            </div>
+          </div>
+        </section>
+
+        <!-- Ideal Applications -->
+        <section class="section alt-bg">
+          <div class="container">
+            <div class="section-heading">
+              <span class="section-badge">Where It Excels</span>
+              <h2>Ideal Applications for V1</h2>
+              <p>
+                Perfect for distributed solar assets and space-constrained
+                installations.
+              </p>
+            </div>
+            <div class="grid three">
+              <div class="glass-card">
+                <div class="icon-circle"><i class="fas fa-building"></i></div>
+                <h3>Rooftop Solar Installations</h3>
+                <p>
+                  Lightweight and maneuverable, ideal for residential &
+                  commercial rooftops.
+                </p>
+              </div>
+              <div class="glass-card">
+                <div class="icon-circle"><i class="fas fa-industry"></i></div>
+                <h3>Commercial & Industrial Buildings</h3>
+                <p>
+                  Clean C&I arrays without heavy machinery or automation costs.
+                </p>
+              </div>
+              <div class="glass-card">
+                <div class="icon-circle">
+                  <i class="fas fa-solar-panel"></i>
+                </div>
+                <h3>Small Solar Plants (<1 MW)</h3>
+                <p>
+                  Cost-effective solution for sub-megawatt plants looking for
+                  daily maintenance.
+                </p>
+              </div>
+              <div class="glass-card">
+                <div class="icon-circle"><i class="fas fa-home"></i></div>
+                <h3>Residential Systems</h3>
+                <p>
+                  Homeowners can maintain panel efficiency with safe, easy
+                  cleaning.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Technical Advantages + extra durability -->
+        <section class="section">
+          <div class="container">
+            <div class="product-spec-layout" style="gap: 32px">
+              <div class="spec-card" style="background: #fef7ed">
+                <h2><i class="fas fa-microchip"></i> Technical Advantages</h2>
+                <ul style="list-style: none; margin-top: 24px">
+                  <li style="margin-bottom: 18px">
+                    <i
+                      class="fas fa-leaf"
+                      style="color: #f5a623; margin-right: 12px"
+                    ></i>
+                    <strong>Eco-friendly cleaning</strong> – minimal water & no
+                    chemicals
+                  </li>
+                  <li style="margin-bottom: 18px">
+                    <i
+                      class="fas fa-battery-full"
+                      style="color: #f5a623; margin-right: 12px"
+                    ></i>
+                    <strong>Flexible power</strong> – battery operated or direct
+                    single-phase
+                  </li>
+                  <li style="margin-bottom: 18px">
+                    <i
+                      class="fas fa-hand-peace"
+                      style="color: #f5a623; margin-right: 12px"
+                    ></i>
+                    <strong>Ergonomic design</strong> – reduces repetitive
+                    stress injuries
+                  </li>
+                  <li style="margin-bottom: 18px">
+                    <i
+                      class="fas fa-chart-line"
+                      style="color: #f5a623; margin-right: 12px"
+                    ></i>
+                    <strong>Proven ROI</strong> – up to 12-18% performance gain
+                    after regular cleaning
+                  </li>
+                </ul>
+              </div>
+              <div class="benefit-card" style="background: #f1f5f9">
+                <h2>⚙️ Operational Excellence</h2>
+                <div class="feature-list">
+                  <div>
+                    <i class="fas fa-check"></i> Suitable for daily or frequent
+                    cleaning cycles
+                  </div>
+                  <div>
+                    <i class="fas fa-check"></i> Reliable performance across
+                    dust-heavy environments
+                  </div>
+                  <div>
+                    <i class="fas fa-check"></i> No automation dependency — 100%
+                    manual control
+                  </div>
+                  <div>
+                    <i class="fas fa-check"></i> Quick redeployment across
+                    multiple arrays
+                  </div>
+                  <div>
+                    <i class="fas fa-check"></i> Integrated edge protection for
+                    panel safety
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="section">
+          <div class="container">
+            <div class="cta-box">
+              <h2>Start Your Solar Cleaning Journey</h2>
+              <p>
+                SunClean Handy V1 — the smartest entry into professional solar
+                maintenance. Get a custom quote or download technical brochure
+                today.
+              </p>
+              <div
+                style="
+                  margin-top: 28px;
+                  display: flex;
+                  gap: 20px;
+                  justify-content: center;
+                  flex-wrap: wrap;
+                "
+              >
+                <a
+                  href="#"
+                  class="btn btn-primary"
+                  style="background: white; color: #1e2f3a"
+                  >Get Quote →</a
+                >
+                <a
+                  href="#"
+                  class="btn btn-secondary"
+                  style="border-color: white; color: white"
+                  >Download Brochure</a
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Related Products (simplified) -->
+        <section class="section alt-bg">
+          <div class="container">
+            <div class="section-heading">
+              <span class="section-badge">Explore Solutions</span>
+              <h2>More From SunClean Tech</h2>
+              <p>From semi-automatic to fully autonomous track-based robots</p>
+            </div>
+            <div class="grid two">
+              <div class="product-card">
+                <img
+                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 180'%3E%3Crect width='300' height='180' fill='%23a7c5e3'/%3E%3Ctext x='70' y='100' fill='%23222'%3ESemi-Auto V2%3C/text%3E%3C/svg%3E"
+                  alt="V2"
+                />
+                <h3>SunClean V2</h3>
+                <p class="product-tag">Semi-Automatic with edge sensors</p>
+                <a href="#" class="btn btn-secondary">Learn More</a>
+              </div>
+              <div class="product-card">
+                <img
+                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 180'%3E%3Crect width='300' height='180' fill='%239fcb9f'/%3E%3Ctext x='60' y='100' fill='%23222'%3EFully Auto V5%3C/text%3E%3C/svg%3E"
+                  alt="V5"
+                />
+                <h3>SunClean V5</h3>
+                <p class="product-tag">Track-based robotic system</p>
+                <a href="#" class="btn btn-secondary">View Product</a>
+              </div>
+              <div class="product-card">
+                <img
+                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 180'%3E%3Crect width='300' height='180' fill='%23f0c0a8'/%3E%3Ctext x='70' y='100'%3EPortable V4%3C/text%3E%3C/svg%3E"
+                  alt="V4"
+                />
+                <h3>SunClean V4</h3>
+                <p class="product-tag">Modular multi-table cleaning</p>
+                <a href="#" class="btn btn-secondary">Get Info</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- =========================
+       FOOTER
+  ========================== -->
+        <footer class="footer">
+          <div class="container footer-grid">
+            <div>
+              <img
+                src="assets/images/loogo.png"
+                alt="SunClean Logo"
+                class="footer-logo"
+              />
+              <p>
+                SunClean Tech delivers smart robotic solutions for efficient
+                solar panel cleaning. Maximizing energy output with sustainable,
+                low-maintenance operations.
+              </p>
+            </div>
+
+            <div>
+              <h4>Quick Links</h4>
+              <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="technology.html">Technology</a></li>
+                <li><a href="roi-value.html">ROI & Value</a></li>
+                <li><a href="clients.html">Our Clients</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+              </ul>
+            </div>
+
+            <div>
+              <h4>Contact</h4>
+              <p><i class="fas fa-phone"></i> +91 76666 37114</p>
+              <p><i class="fas fa-envelope"></i> sales@sunclean.in</p>
+              <p>
+                <i class="fas fa-map-marker-alt"></i> Pune, Maharashtra, India
+              </p>
+            </div>
+          </div>
+
+          <div class="footer-bottom">
+            <p>
+              © <span id="currentYear"></span> SunClean Tech Private Limited.
+              All Rights Reserved.
+            </p>
+          </div>
+        </footer>
+
+        <script>
+          // dynamic year
+          document.getElementById("currentYear").innerHTML =
+            new Date().getFullYear();
+          // thumbnail switcher (simple demo)
+          const thumbs = document.querySelectorAll(".thumb");
+          const mainImg = document.getElementById("mainProductImage");
+          if (thumbs.length && mainImg) {
+            thumbs.forEach((thumb) => {
+              thumb.addEventListener("click", function () {
+                thumbs.forEach((t) => t.classList.remove("active-thumb"));
+                this.classList.add("active-thumb");
+                mainImg.src = this.src;
+              });
+            });
+          }
+          // mobile menu toggle (simple)
+          const menuBtn = document.getElementById("menuBtn");
+          const navMenu = document.getElementById("navMenu");
+          if (menuBtn) {
+            menuBtn.addEventListener("click", () => {
+              if (navMenu.style.display === "flex")
+                navMenu.style.display = "none";
+              else navMenu.style.display = "flex";
+            });
+          }
+          window.addEventListener("resize", () => {
+            if (window.innerWidth > 900 && navMenu)
+              navMenu.style.display = "flex";
+            else if (
+              window.innerWidth <= 900 &&
+              navMenu &&
+              navMenu.style.display !== "flex"
+            )
+              navMenu.style.display = "none";
+          });
+        </script>
+        <script src="js/script.js"></script>
+      </body>
+    </html>
+  </body>
+</html>
