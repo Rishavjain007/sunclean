@@ -1,956 +1,675 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SunClean V5 | Product Details</title>
 
-    <link rel="stylesheet" href="css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      href="assets/images/android-chrome-192x192.png"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      /* ===== RESET ===== */
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SunClean Hybrid – V3 | Product Details</title>
 
-      body {
-        font-family: "Inter", sans-serif;
-        background-color: #ffffff;
-        color: #1a2a3a;
-        line-height: 1.5;
-      }
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="icon" type="image/png" href="assets/images/loogo.png" />
 
-      /* ===== CONTAINER ===== */
-      .container {
-        max-width: 1280px;
-        margin: 0 auto;
-        padding: 0 24px;
-      }
-
-      /* =================================
-   ✅ NEW NAVBAR (UPDATED)
-================================= */
-      .header {
-        position: sticky;
-        top: 0;
-        z-index: 9999;
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(12px);
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
-      }
-
-      .nav-container {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 10px 0;
-      }
-
-      .brand {
-        display: flex;
-        align-items: center;
-      }
-
-      .brand-logo {
-        height: 60px;
-        transition: 0.3s;
-      }
-
-      .brand:hover .brand-logo {
-        transform: scale(1.03);
-      }
-
-      .nav {
-        display: flex;
-        gap: 24px;
-      }
-
-      .nav a {
-        color: #1f2937;
-        font-weight: 600;
-        font-size: 0.96rem;
-        position: relative;
-        text-decoration: none;
-      }
-
-      .nav a::after {
-        content: "";
-        position: absolute;
-        bottom: -6px;
-        left: 0;
-        width: 0;
-        height: 2px;
-        background: #f57c00;
-        transition: 0.3s;
-      }
-
-      .nav a:hover,
-      .nav a.active {
-        color: #43a047;
-      }
-
-      .nav a:hover::after,
-      .nav a.active::after {
-        width: 100%;
-      }
-
-      .menu-btn {
-        display: none;
-        background: #43a047;
-        color: white;
-        border: none;
-        width: 46px;
-        height: 46px;
-        border-radius: 12px;
-        font-size: 1.2rem;
-        cursor: pointer;
-      }
-
-      /* =================================
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <style>
+    /* =================================
    HERO
 ================================= */
-      .product-detail-hero {
-        padding: 60px 0 40px;
-        background: linear-gradient(135deg, #fefaf5, #ffffff);
-      }
+    .product-detail-hero {
+      padding: 60px 0 40px;
+      background: linear-gradient(135deg, #fefaf5, #ffffff);
+    }
 
-      .product-detail-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 48px;
-      }
+    .product-detail-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+    }
 
-      /* IMAGE */
-      .product-gallery {
-        background: #fefcf8;
-        border-radius: 32px;
-        padding: 12px;
-      }
+    /* IMAGE */
+    .product-gallery {
+      background: #fefcf8;
+      border-radius: 32px;
+      padding: 12px;
+    }
 
-      .main-product-image {
-        border-radius: 28px;
-        overflow: hidden;
-      }
+    .main-product-image {
+      border-radius: 28px;
+      overflow: hidden;
+    }
 
-      .main-product-image img {
-        width: 100%;
-        transition: 0.3s;
-      }
+    .main-product-image img {
+      width: 100%;
+      transition: 0.3s;
+    }
 
-      .thumbnail-row {
-        display: flex;
-        gap: 12px;
-        margin-top: 10px;
-      }
+    .thumbnail-row {
+      display: flex;
+      gap: 12px;
+      margin-top: 10px;
+    }
 
-      .thumb {
-        width: 80px;
-        height: 80px;
-        border-radius: 14px;
-        cursor: pointer;
-        opacity: 0.7;
-      }
+    .thumb {
+      width: 80px;
+      height: 80px;
+      border-radius: 14px;
+      cursor: pointer;
+      opacity: 0.7;
+    }
 
-      .thumb:hover,
-      .active-thumb {
-        opacity: 1;
-        border: 2px solid #f57c00;
-      }
+    .thumb:hover,
+    .active-thumb {
+      opacity: 1;
+      border: 2px solid #f57c00;
+    }
 
-      /* =================================
+    /* =================================
    PRODUCT INFO
 ================================= */
-      .product-info-box h1 {
-        font-size: 2.4rem;
-        font-weight: 800;
-      }
+    .product-info-box h1 {
+      font-size: 2.4rem;
+      font-weight: 800;
+    }
 
-      .product-subtitle {
-        border-left: 3px solid #f57c00;
-        padding-left: 12px;
-        margin: 15px 0;
-        color: #3c5a6f;
-      }
+    .product-subtitle {
+      border-left: 3px solid #f57c00;
+      padding-left: 12px;
+      margin: 15px 0;
+      color: #3c5a6f;
+    }
 
-      .product-highlights {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        margin: 20px 0;
-      }
+    .product-highlights {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 20px 0;
+    }
 
-      .product-highlights div {
-        background: #f8fafc;
-        padding: 8px 14px;
-        border-radius: 40px;
-        font-size: 0.85rem;
-      }
+    .product-highlights div {
+      background: #f8fafc;
+      padding: 8px 14px;
+      border-radius: 40px;
+      font-size: 0.85rem;
+    }
 
-      /* BUTTONS */
-      .btn {
-        padding: 12px 25px;
-        border-radius: 30px;
-        font-weight: 600;
-        cursor: pointer;
-      }
+    /* BUTTONS */
+    .btn {
+      padding: 12px 25px;
+      border-radius: 30px;
+      font-weight: 600;
+      cursor: pointer;
+    }
 
-      .btn-primary {
-        background: #f57c00;
-        color: white;
-      }
+    .btn-primary {
+      background: #f57c00;
+      color: white;
+    }
 
-      .btn-secondary {
-        border: 1px solid #1f2937;
-      }
+    .btn-secondary {
+      border: 1px solid #1f2937;
+    }
 
-      /* QUICK SPEC */
-      .quick-spec-box {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
-        background: #f9fbfd;
-        padding: 15px;
-        border-radius: 20px;
-      }
+    /* QUICK SPEC */
+    .quick-spec-box {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      background: #f9fbfd;
+      padding: 15px;
+      border-radius: 20px;
+    }
 
-      .quick-spec-item h4 {
-        font-size: 0.75rem;
-      }
+    .quick-spec-item h4 {
+      font-size: 0.75rem;
+    }
 
-      .quick-spec-item p {
-        font-weight: bold;
-      }
+    .quick-spec-item p {
+      font-weight: bold;
+    }
 
-      /* =================================
+    /* =================================
    SECTIONS
 ================================= */
-      .section {
-        padding: 70px 0;
-      }
+    .section {
+      padding: 70px 0;
+    }
 
-      .alt-bg {
-        background: #fafcff;
-      }
+    .alt-bg {
+      background: #fafcff;
+    }
 
-      .section-heading {
-        text-align: center;
-        margin-bottom: 40px;
-      }
+    .section-heading {
+      text-align: center;
+      margin-bottom: 40px;
+    }
 
-      /* CARDS */
-      .info-card {
-        background: white;
-        padding: 24px;
-        border-radius: 20px;
-      }
+    /* CARDS */
+    .info-card {
+      background: white;
+      padding: 24px;
+      border-radius: 20px;
+    }
 
-      /* SPEC TABLE */
-      .spec-row {
-        display: flex;
-        justify-content: space-between;
-        padding: 12px 0;
-        border-bottom: 1px solid #eee;
-      }
+    /* SPEC TABLE */
+    .spec-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 12px 0;
+      border-bottom: 1px solid #eee;
+    }
 
-      /* LIST */
-      .feature-list div {
-        margin: 10px 0;
-      }
+    /* LIST */
+    .feature-list div {
+      margin: 10px 0;
+    }
 
-      /* TIMELINE */
-      .timeline-item {
-        display: flex;
-        gap: 15px;
-        margin-bottom: 20px;
-      }
+    /* TIMELINE */
+    .timeline-item {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
 
-      .timeline-number {
-        background: #f57c00;
-        color: white;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
+    .timeline-number {
+      background: #f57c00;
+      color: white;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-      /* =================================
-   ✅ NEW FOOTER (UPDATED)
-================================= */
-      .footer {
-        background: #0d1526;
-        color: rgba(255, 255, 255, 0.85);
-        padding: 70px 0 20px;
-      }
-
-      .footer-grid {
-        display: grid;
-        grid-template-columns: 1.2fr 1fr 1fr;
-        gap: 30px;
-      }
-
-      .footer-logo {
-        max-width: 120px;
-        margin-bottom: 16px;
-      }
-
-      .footer h4 {
-        color: white;
-        margin-bottom: 14px;
-      }
-
-      .footer p,
-      .footer a {
-        color: rgba(255, 255, 255, 0.75);
-        text-decoration: none;
-      }
-
-      .footer a:hover {
-        color: #f57c00;
-      }
-
-      .footer-links li {
-        margin-bottom: 10px;
-      }
-
-      .footer-bottom {
-        margin-top: 30px;
-        padding-top: 15px;
-        border-top: 1px solid rgba(255, 255, 255, 0.08);
-        text-align: center;
-      }
-
-      /* =================================
+    /* =================================
    RESPONSIVE
 ================================= */
-      @media (max-width: 900px) {
-        .product-detail-grid {
-          grid-template-columns: 1fr;
-        }
-
-        .nav {
-          display: none;
-        }
-
-        .menu-btn {
-          display: block;
-        }
-
-        .footer-grid {
-          grid-template-columns: 1fr;
-        }
+    @media (max-width: 900px) {
+      .product-detail-grid {
+        grid-template-columns: 1fr;
       }
-    </style>
-  </head>
+    }
+  </style>
+</head>
 
-  <body>
-    <!-- =========================
+<body>
+  <!-- =========================
        HEADER
   ========================== -->
-    <!-- =========================
-       HEADER
-  ========================== -->
-    <header class="header">
-      <div class="container nav-container">
-        <a href="index.html" class="brand">
-          <img
-            src="assets/images/loogo.png"
-            alt="SunClean Logo"
-            class="brand-logo"
-          />
-        </a>
+  <header class="header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand">
+        <img src="assets/images/loogo.png" alt="SunClean Logo" class="brand-logo" />
+      </a>
 
-        <nav class="nav" id="navMenu">
-          <a href="index.html">Home</a>
-          <a href="about.html">About Us</a>
-          <a href="products.html" class="active">Products</a>
-          <a href="technology.html">Technology</a>
-          <a href="roi-value.html">ROI & Value</a>
-          <a href="clients.html">Our Clients</a>
-          <a href="contact.html">Contact Us</a>
-        </nav>
+      <nav class="nav" id="navMenu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="products.html" class="active">Products</a>
+        <a href="technology.html">Technology</a>
+        <a href="roi-value.html">ROI & Value</a>
+        <a href="clients.html">Our Clients</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
 
-        <button class="menu-btn" id="menuBtn" aria-label="Toggle Menu">
-          <i class="fas fa-bars"></i>
-        </button>
-      </div>
-    </header>
+      <button class="menu-btn" id="menuBtn" aria-label="Toggle Menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
 
-    <!-- Hero Section: SunClean Handy V1 -->
-    <section class="product-detail-hero">
-      <div class="container">
-        <div class="product-detail-grid">
-          <div class="product-gallery">
-            <div class="main-product-image">
-              <img
-                id="mainProductImage"
-                src="./assets/images/v1.png"
-                alt="SunClean Handy V1 Main"
-              />
-            </div>
-            <div class="thumbnail-row">
-              <img
-                src="./assets/images/v1.png"
-                class="thumb active-thumb"
-                alt="thumb brush"
-              />
-              <img
-                src="./assets/images/V1/b9ae54df-3179-4321-bcc9-faaae10869e3.png"
-                class="thumb active-thumb"
-                alt="thumb brush"
-              />
-              <img
-                src="./assets/images/V1/ChatGPT Image Apr 21, 2026, 10_26_36 PM.png"
-                class="thumb"
-                alt="wet cleaning"
-              />
-              <img
-                src="./assets/images/V1/ChatGPT Image Apr 21, 2026, 10_56_13 PM.png"
-                class="thumb"
-                alt="lightweight"
-              />
-              <img
-                src="./assets/images/V1/ChatGPT Image Apr 21, 2026, 11_00_05 PM.png"
-                class="thumb"
-                alt="dual rotary"
-              />
-            </div>
+  <!-- Hero Section: SunClean Handy V1 -->
+  <section class="product-detail-hero">
+    <div class="container">
+      <div class="product-detail-grid">
+        <div class="product-gallery">
+          <div class="main-product-image">
+            <img id="mainProductImage" src="./assets/images/v3.png" alt="SunClean Hybrid V3 Main" />
           </div>
-          <div class="product-info-box">
-            <span class="section-badge">Entry-Level · Smart Manual</span>
-            <h1>SunClean Handy – V1</h1>
-            <p class="product-subtitle">
-              Reliable, lightweight, cost-effective solar panel cleaning for
-              everyday operations
-            </p>
-            <p>
-              Engineered for small to medium-scale solar installations, SunClean
-              Handy V1 combines dual-rotary brush technology with wet cleaning
-              capability. Achieve consistent dust removal, improved panel
-              efficiency, and minimal investment — ideal for rooftop and
-              distributed solar plants.
-            </p>
-            <div class="product-highlights">
-              <div>
-                <i class="fas fa-check-circle"></i> Manual + Wet Cleaning
-              </div>
-              <div><i class="fas fa-check-circle"></i> Dual Rotary Brushes</div>
-              <div>
-                <i class="fas fa-check-circle"></i> Lightweight / Portable
-              </div>
-              <div><i class="fas fa-check-circle"></i> Plug-and-Play</div>
-            </div>
-            <div class="product-cta-row">
-              <a href="#" class="btn btn-primary"
-                ><i class="fas fa-file-invoice-dollar"></i> Get Quote</a
-              >
-              <a href="#" class="btn btn-secondary"
-                ><i class="fas fa-download"></i> Download Brochure</a
-              >
-            </div>
-            <div class="quick-spec-box">
-              <div class="quick-spec-item">
-                <h4>Cleaning Type</h4>
-                <p>Manual + Wet</p>
-              </div>
-              <div class="quick-spec-item">
-                <h4>Brush System</h4>
-                <p>Dual Rotary</p>
-              </div>
-              <div class="quick-spec-item">
-                <h4>Power Source</h4>
-                <p>Electric (1-Phase)</p>
-              </div>
-              <div class="quick-spec-item">
-                <h4>Application</h4>
-                <p>Rooftop / Small Plants</p>
-              </div>
-            </div>
+          <div class="thumbnail-row">
+            <img src="./assets/images/v3.png" class="thumb active-thumb" alt="thumb brush" />
+            <img src="./assets/images/V3/ChatGPT Image Apr 21, 2026, 11_48_51 PM.png" class="thumb active-thumb"
+              alt="thumb brush" />
+            <img src="./assets/images/V3/sunclean (1).webp" class="thumb" alt="wet cleaning" />
+            <img src="./assets/images/V3/sunclean (2).jpg" class="thumb" alt="lightweight" />
+            <img src="./assets/images/V3/SunClean Hybrid - V3.png" class="thumb" alt="dual rotary" />
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- Key Features (dual rotary + wet cleaning + lightweight) -->
-    <section class="section">
-      <div class="container">
-        <div class="section-heading">
-          <span class="section-badge">Core Features</span>
-          <h2>Designed for Efficient Daily Maintenance</h2>
-          <p>
-            Smart manual operation, reduced fatigue, and superior cleaning
-            results for rooftop & commercial arrays.
+        <div class="product-info-box">
+          <span class="section-badge">Autonomous · Time-Based Control</span>
+          <h1>SunClean Hybrid – V3</h1>
+          <p class="product-subtitle">
+            Self-operating, solar-powered cleaning robot designed for scheduled, consistent, and maintenance-free solar
+            panel cleaning.
           </p>
-        </div>
-        <div class="grid four">
-          <div class="info-card">
-            <i class="fas fa-exchange-alt"></i>
-            <h3>Dual-Rotary Brush System</h3>
-            <p>
-              Uniform cleaning coverage across solar panels, removing dust &
-              debris effectively.
-            </p>
-          </div>
-          <div class="info-card">
-            <i class="fas fa-tint"></i>
-            <h3>Wet Cleaning Mechanism</h3>
-            <p>
-              Enhanced deep dust removal & bird dropping elimination with
-              controlled water flow.
-            </p>
-          </div>
-          <div class="info-card">
-            <i class="fas fa-weight-hanging"></i>
-            <h3>Lightweight & Portable</h3>
-            <p>
-              Easy handling across rooftops, reduces operator fatigue compared
-              to traditional methods.
-            </p>
-          </div>
-          <div class="info-card">
-            <i class="fas fa-plug"></i>
-            <h3>Plug-and-Play Simplicity</h3>
-            <p>
-              No complex installation — immediate operation with battery or
-              external power.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Technical Specifications + Advantages (Why V1) -->
-    <section class="section alt-bg">
-      <div class="container">
-        <div class="product-spec-layout">
-          <div class="spec-card">
-            <h2>📋 Technical Specifications</h2>
-            <div class="spec-list">
-              <div class="spec-row">
-                <span>Cleaning Type</span><strong>Manual + Wet Cleaning</strong>
-              </div>
-              <div class="spec-row">
-                <span>Brush System</span><strong>Dual Rotary Brushes</strong>
-              </div>
-              <div class="spec-row">
-                <span>Operation Mode</span><strong>Battery / External</strong>
-              </div>
-              <div class="spec-row">
-                <span>Weight</span
-                ><strong>Lightweight / Portable (<8 kg)</strong>
-              </div>
-              <div class="spec-row">
-                <span>Water Usage</span><strong>Controlled Flow System</strong>
-              </div>
-              <div class="spec-row">
-                <span>Application</span
-                ><strong>Rooftop / Small Solar Plants (<1 MW)</strong>
-              </div>
-              <div class="spec-row">
-                <span>Power Source</span
-                ><strong>Electric (Single Phase)</strong>
-              </div>
-              <div class="spec-row">
-                <span>Panel Compatibility</span
-                ><strong>Framed & Frameless</strong>
-              </div>
-            </div>
-          </div>
-          <div class="benefit-card">
-            <h2>✅ Why Choose SunClean Handy – V1</h2>
-            <div class="feature-list">
-              <div>
-                <i class="fas fa-check-circle"></i> Lowest entry cost for solar
-                cleaning automation journey
-              </div>
-              <div>
-                <i class="fas fa-check-circle"></i> Reduces manual labor fatigue
-                compared to traditional cleaning
-              </div>
-              <div>
-                <i class="fas fa-check-circle"></i> Improves panel efficiency by
-                removing stubborn dirt layers
-              </div>
-              <div>
-                <i class="fas fa-check-circle"></i> No dependency on automation
-                or external control systems
-              </div>
-              <div>
-                <i class="fas fa-check-circle"></i> Suitable for daily /
-                frequent cleaning cycles
-              </div>
-              <div>
-                <i class="fas fa-check-circle"></i> Low maintenance and easy
-                serviceability
-              </div>
-              <div>
-                <i class="fas fa-check-circle"></i> Quick deployment without
-                technical complexity
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- How It Works (Working Principle) -->
-    <section class="section">
-      <div class="container">
-        <div class="section-heading">
-          <span class="section-badge">Simple Workflow</span>
-          <h2>How SunClean Handy V1 Operates</h2>
           <p>
-            Intuitive process for uniform cleaning and improved energy yield
+            SunClean Hybrid – V3 is a fully autonomous solar panel cleaning robot engineered for reliable, scheduled
+            cleaning without manual intervention. It leverages time-based programming, onboard solar charging, and
+            intelligent sensors to deliver consistent cleaning performance.
           </p>
-        </div>
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-number">1</div>
-            <div class="timeline-content">
-              <h3>Position on Solar Panel</h3>
-              <p>
-                Operator places the lightweight system onto the panel surface
-                securely.
-              </p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-number">2</div>
-            <div class="timeline-content">
-              <h3>Plug & Activate Brushes</h3>
-              <p>
-                Plug-and-play mechanism activates dual rotating brushes
-                instantly.
-              </p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-number">3</div>
-            <div class="timeline-content">
-              <h3>Controlled Wet Cleaning</h3>
-              <p>
-                Integrated water flow system enables efficient wet cleaning for
-                deep dust removal.
-              </p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-number">4</div>
-            <div class="timeline-content">
-              <h3>Manual Movement / Full Coverage</h3>
-              <p>
-                User guides the device across rows to remove dust, droppings &
-                debris.
-              </p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-number">5</div>
-            <div class="timeline-content">
-              <h3>Outcome: Improved Yield</h3>
-              <p>
-                Uniform cleaning with minimal effort, boosting daily energy
-                output.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div style="text-align: center; margin-top: 20px; font-style: italic">
-          👉 Uniform cleaning with minimal effort and improved energy yield.
-        </div>
-      </div>
-    </section>
-
-    <!-- Ideal Applications -->
-    <section class="section alt-bg">
-      <div class="container">
-        <div class="section-heading">
-          <span class="section-badge">Where It Excels</span>
-          <h2>Ideal Applications for V1</h2>
           <p>
-            Perfect for distributed solar assets and space-constrained
-            installations.
+            Designed for operational independence, V3 eliminates the need for apps or manual control, making it ideal
+            for solar plants seeking low-maintenance, high-efficiency cleaning solutions.
           </p>
-        </div>
-        <div class="grid three">
-          <div class="glass-card">
-            <div class="icon-circle"><i class="fas fa-building"></i></div>
-            <h3>Rooftop Solar Installations</h3>
-            <p>
-              Lightweight and maneuverable, ideal for residential & commercial
-              rooftops.
-            </p>
+          <div class="product-highlights">
+            <div><i class="fas fa-check-circle"></i> Fully Autonomous Cleaning</div>
+            <div><i class="fas fa-check-circle"></i> Time-Based Programming</div>
+            <div><i class="fas fa-check-circle"></i> Solar Charging + LiFePO4</div>
+            <div><i class="fas fa-check-circle"></i> No App Required</div>
           </div>
-          <div class="glass-card">
-            <div class="icon-circle"><i class="fas fa-industry"></i></div>
-            <h3>Commercial & Industrial Buildings</h3>
-            <p>Clean C&I arrays without heavy machinery or automation costs.</p>
+          <div class="product-cta-row">
+            <a href="contact.html" class="btn btn-primary"><i class="fas fa-file-invoice-dollar"></i> Get Quote</a>
+            <a href="assets/images/SunCleanBrochure.in.pdf" download class="btn btn-secondary"><i
+                class="fas fa-download"></i> Download Brochure</a>
           </div>
-          <div class="glass-card">
-            <div class="icon-circle">
-              <i class="fas fa-solar-panel"></i>
+          <div class="quick-spec-box">
+            <div class="quick-spec-item">
+              <h4>Cleaning Type</h4>
+              <p>Fully Autonomous</p>
             </div>
-            <h3>Small Solar Plants (<1 MW)</h3>
-            <p>
-              Cost-effective solution for sub-megawatt plants looking for daily
-              maintenance.
-            </p>
-          </div>
-          <div class="glass-card">
-            <div class="icon-circle"><i class="fas fa-home"></i></div>
-            <h3>Residential Systems</h3>
-            <p>
-              Homeowners can maintain panel efficiency with safe, easy cleaning.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Technical Advantages + extra durability -->
-    <section class="section">
-      <div class="container">
-        <div class="product-spec-layout" style="gap: 32px">
-          <div class="spec-card" style="background: #fef7ed">
-            <h2><i class="fas fa-microchip"></i> Technical Advantages</h2>
-            <ul style="list-style: none; margin-top: 24px">
-              <li style="margin-bottom: 18px">
-                <i
-                  class="fas fa-leaf"
-                  style="color: #f5a623; margin-right: 12px"
-                ></i>
-                <strong>Eco-friendly cleaning</strong> – minimal water & no
-                chemicals
-              </li>
-              <li style="margin-bottom: 18px">
-                <i
-                  class="fas fa-battery-full"
-                  style="color: #f5a623; margin-right: 12px"
-                ></i>
-                <strong>Flexible power</strong> – battery operated or direct
-                single-phase
-              </li>
-              <li style="margin-bottom: 18px">
-                <i
-                  class="fas fa-hand-peace"
-                  style="color: #f5a623; margin-right: 12px"
-                ></i>
-                <strong>Ergonomic design</strong> – reduces repetitive stress
-                injuries
-              </li>
-              <li style="margin-bottom: 18px">
-                <i
-                  class="fas fa-chart-line"
-                  style="color: #f5a623; margin-right: 12px"
-                ></i>
-                <strong>Proven ROI</strong> – up to 12-18% performance gain
-                after regular cleaning
-              </li>
-            </ul>
-          </div>
-          <div class="benefit-card" style="background: #f1f5f9">
-            <h2>⚙️ Operational Excellence</h2>
-            <div class="feature-list">
-              <div>
-                <i class="fas fa-check"></i> Suitable for daily or frequent
-                cleaning cycles
-              </div>
-              <div>
-                <i class="fas fa-check"></i> Reliable performance across
-                dust-heavy environments
-              </div>
-              <div>
-                <i class="fas fa-check"></i> No automation dependency — 100%
-                manual control
-              </div>
-              <div>
-                <i class="fas fa-check"></i> Quick redeployment across multiple
-                arrays
-              </div>
-              <div>
-                <i class="fas fa-check"></i> Integrated edge protection for
-                panel safety
-              </div>
+            <div class="quick-spec-item">
+              <h4>Operation Mode</h4>
+              <p>Time-Based</p>
+            </div>
+            <div class="quick-spec-item">
+              <h4>Battery Type</h4>
+              <p>LiFePO4</p>
+            </div>
+            <div class="quick-spec-item">
+              <h4>Charging</h4>
+              <p>Integrated Solar</p>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+    </div>
+  </section>
 
-    <!-- CTA Section -->
-    <section class="section">
-      <div class="container">
-        <div class="cta-box">
-          <h2>Start Your Solar Cleaning Journey</h2>
-          <p>
-            SunClean Handy V1 — the smartest entry into professional solar
-            maintenance. Get a custom quote or download technical brochure
-            today.
-          </p>
-          <div
-            style="
+  <!-- Key Features (dual rotary + wet cleaning + lightweight) -->
+  <section class="section">
+    <div class="container">
+      <div class="section-heading">
+        <span class="section-badge">Core Features</span>
+        <h2>Autonomous Solar Cleaning with Smart Time-Based Control</h2>
+        <p>
+          Self-operating, solar-powered automation for scheduled and maintenance-free cleaning.
+        </p>
+      </div>
+      <div class="grid four">
+        <div class="info-card">
+          <i class="fas fa-clock"></i>
+          <h3>Time-Based Programming</h3>
+          <p>Configure autonomous cleaning cycles using the onboard timer system.</p>
+        </div>
+        <div class="info-card">
+          <i class="fas fa-solar-panel"></i>
+          <h3>Solar Charging System</h3>
+          <p>Integrated solar panel continuously charges the onboard LiFePO4 battery.</p>
+        </div>
+        <div class="info-card">
+          <i class="fas fa-shield-alt"></i>
+          <h3>Edge Detection Sensors</h3>
+          <p>Ensures safe and accurate operation with automatic boundary detection.</p>
+        </div>
+        <div class="info-card">
+          <i class="fas fa-mobile-alt"></i>
+          <h3>No App Required</h3>
+          <p>Operates independently without external control systems or mobile apps.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Specifications + Advantages (Why V1) -->
+  <section class="section alt-bg">
+    <div class="container">
+      <div class="product-spec-layout">
+        <div class="spec-card">
+          <h2>📋 Technical Specifications</h2>
+          <div class="spec-list">
+            <div class="spec-row"><span>Cleaning Type</span><strong>Fully Autonomous Cleaning</strong></div>
+            <div class="spec-row"><span>Operation Mode</span><strong>Time-Based Programmable</strong></div>
+            <div class="spec-row"><span>Battery Type</span><strong>LiFePO4 Battery</strong></div>
+            <div class="spec-row"><span>Charging System</span><strong>Integrated Solar Panel</strong></div>
+            <div class="spec-row"><span>Sensor System</span><strong>Edge Detection Sensors</strong></div>
+            <div class="spec-row"><span>Docking</span><strong>Dedicated Parking Platform</strong></div>
+            <div class="spec-row"><span>Control Requirement</span><strong>No App Required</strong></div>
+            <div class="spec-row"><span>Deployment</span><strong>Fixed Table Installation</strong></div>
+          </div>
+        </div>
+        <div class="benefit-card">
+          <h2>✅ Why Choose SunClean Hybrid – V3</h2>
+          <div class="feature-list">
+            <div><i class="fas fa-check-circle"></i> Fully automated cleaning without operational complexity</div>
+            <div><i class="fas fa-check-circle"></i> Eliminates daily manpower requirement</div>
+            <div><i class="fas fa-check-circle"></i> Ensures consistent cleaning frequency and improved energy
+              generation
+            </div>
+            <div><i class="fas fa-check-circle"></i> Reduces operational cost over long-term plant lifecycle</div>
+            <div><i class="fas fa-check-circle"></i> Operates independently using renewable solar charging</div>
+            <div><i class="fas fa-check-circle"></i> Zero dependency on external control systems or apps</div>
+            <div><i class="fas fa-check-circle"></i> Sustainable operation reducing energy costs</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- How It Works (Working Principle) -->
+  <section class="section">
+    <div class="container">
+      <div class="section-heading">
+        <span class="section-badge">Simple Workflow</span>
+        <h2>How SunClean Hybrid V3 Operates</h2>
+        <p>
+          Intuitive process for uniform cleaning and improved energy yield
+        </p>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-number">1</div>
+          <div class="timeline-content">
+            <h3>Configure Cleaning Schedule</h3>
+            <p>Set cleaning intervals using the onboard timer system.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-number">2</div>
+          <div class="timeline-content">
+            <h3>Automatic Activation</h3>
+            <p>Robot starts automatically at predefined times.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-number">3</div>
+          <div class="timeline-content">
+            <h3>Uniform Cleaning Operation</h3>
+            <p>Moves across panel rows delivering consistent cleaning performance.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-number">4</div>
+          <div class="timeline-content">
+            <h3>Safe Edge Detection</h3>
+            <p>Sensors detect boundaries and stop movement safely.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-number">5</div>
+          <div class="timeline-content">
+            <h3>Return to Docking Platform</h3>
+            <p>Returns to standby position for readiness and charging.</p>
+          </div>
+        </div>
+      </div>
+      <div style="text-align: center; margin-top: 20px; font-style: italic">
+        👉 Fully automated, consistent cleaning with zero manual dependency.
+      </div>
+    </div>
+  </section>
+
+  <!-- Ideal Applications -->
+  <section class="section alt-bg">
+    <div class="container">
+      <div class="section-heading">
+        <span class="section-badge">Where It Excels</span>
+        <h2>Ideal Applications for V3</h2>
+        <p>
+          Perfect for distributed solar assets and space-constrained
+          installations.
+        </p>
+      </div>
+      <div class="grid three">
+        <div class="glass-card">
+          <div class="icon-circle"><i class="fas fa-solar-panel"></i></div>
+          <h3>Medium to Large-Scale Solar Plants</h3>
+          <p>Ideal for installations requiring scheduled autonomous cleaning.</p>
+        </div>
+        <div class="glass-card">
+          <div class="icon-circle"><i class="fas fa-industry"></i></div>
+          <h3>Industrial Solar Installations</h3>
+          <p>Reliable low-maintenance cleaning for industrial environments.</p>
+        </div>
+        <div class="glass-card">
+          <div class="icon-circle"><i class="fas fa-users-slash"></i></div>
+          <h3>Limited Manpower Sites</h3>
+          <p>Eliminates daily labor requirements for cleaning operations.</p>
+        </div>
+        <div class="glass-card">
+          <div class="icon-circle"><i class="fas fa-map-marked-alt"></i></div>
+          <h3>Remote Solar Projects</h3>
+          <p>Perfect for projects requiring self-sustaining automation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Advantages + extra durability -->
+  <section class="section">
+    <div class="container">
+      <div class="product-spec-layout" style="gap: 32px">
+        <div class="spec-card" style="background: #fef7ed">
+          <h2><i class="fas fa-microchip"></i> Technical Advantages</h2>
+          <ul style="list-style: none; margin-top: 24px">
+            <li style="margin-bottom: 18px"><i class="fas fa-users-slash"
+                style="color: #f5a623; margin-right: 12px"></i><strong>Zero manpower dependency</strong> – eliminates
+              daily cleaning labor</li>
+            <li style="margin-bottom: 18px"><i class="fas fa-chart-line"
+                style="color: #f5a623; margin-right: 12px"></i><strong>Consistent cleaning frequency</strong> – improves
+              energy generation</li>
+            <li style="margin-bottom: 18px"><i class="fas fa-leaf"
+                style="color: #f5a623; margin-right: 12px"></i><strong>Solar-powered operation</strong> – renewable
+              charging reduces energy costs</li>
+            <li style="margin-bottom: 18px"><i class="fas fa-shield-alt"
+                style="color: #f5a623; margin-right: 12px"></i><strong>High reliability</strong> – minimal human
+              intervention required</li>
+          </ul>
+        </div>
+        <div class="benefit-card" style="background: #f1f5f9">
+          <h2>⚙️ Operational Excellence</h2>
+          <div class="feature-list">
+            <div><i class="fas fa-check"></i> Dedicated docking platform for secure standby</div>
+            <div><i class="fas fa-check"></i> Integrated solar charging with LiFePO4 battery</div>
+            <div><i class="fas fa-check"></i> No mobile app required for operation</div>
+            <div><i class="fas fa-check"></i> Fixed-table installation for dependable performance</div>
+            <div><i class="fas fa-check"></i> Scheduled, maintenance-free cleaning cycles</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-box">
+        <h2>Start Your Solar Cleaning Journey</h2>
+        <p>
+          SunClean Hybrid V3 delivers fully automated cleaning with zero manual dependency. Get a custom quote or
+          download the technical brochure today.
+        </p>
+        <div style="
               margin-top: 28px;
               display: flex;
               gap: 20px;
               justify-content: center;
               flex-wrap: wrap;
-            "
-          >
-            <a
-              href="#"
-              class="btn btn-primary"
-              style="background: white; color: #1e2f3a"
-              >Get Quote →</a
-            >
-            <a
-              href="#"
-              class="btn btn-secondary"
-              style="border-color: white; color: white"
-              >Download Brochure</a
-            >
-          </div>
+            ">
+          <a href="contact.html" class="btn btn-primary" style="background: white; color: #1e2f3a">Get Quote →</a>
+          <a href="assets/images/SunCleanBrochure.in.pdf" download class="btn btn-secondary"
+            style="border-color: white; color: white">Download Brochure</a>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Related Products (simplified) -->
-    <section class="section alt-bg">
-      <div class="container">
-        <div class="section-heading">
-          <span class="section-badge">Explore Solutions</span>
-          <h2>More From SunClean Tech</h2>
-          <p>From semi-automatic to fully autonomous track-based robots</p>
-        </div>
-        <div class="grid two">
-          <div class="product-card">
-            <img
-              src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 180'%3E%3Crect width='300' height='180' fill='%23a7c5e3'/%3E%3Ctext x='70' y='100' fill='%23222'%3ESemi-Auto V2%3C/text%3E%3C/svg%3E"
-              alt="V2"
-            />
-            <h3>SunClean V2</h3>
-            <p class="product-tag">Semi-Automatic with edge sensors</p>
-            <a href="#" class="btn btn-secondary">Learn More</a>
-          </div>
-          <div class="product-card">
-            <img
-              src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 180'%3E%3Crect width='300' height='180' fill='%239fcb9f'/%3E%3Ctext x='60' y='100' fill='%23222'%3EFully Auto V5%3C/text%3E%3C/svg%3E"
-              alt="V5"
-            />
-            <h3>SunClean V5</h3>
-            <p class="product-tag">Track-based robotic system</p>
-            <a href="#" class="btn btn-secondary">View Product</a>
-          </div>
-          <div class="product-card">
-            <img
-              src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 180'%3E%3Crect width='300' height='180' fill='%23f0c0a8'/%3E%3Ctext x='70' y='100'%3EPortable V4%3C/text%3E%3C/svg%3E"
-              alt="V4"
-            />
-            <h3>SunClean V4</h3>
-            <p class="product-tag">Modular multi-table cleaning</p>
-            <a href="#" class="btn btn-secondary">Get Info</a>
-          </div>
-        </div>
+  <!-- Related Products (simplified) -->
+  <section class="section alt-bg">
+    <div class="container">
+      <div class="section-heading">
+        <span class="section-badge">Explore Solutions</span>
+        <h2>More From SunClean Tech</h2>
+        <p>From semi-automatic to fully autonomous track-based robots</p>
       </div>
-    </section>
-    <!-- =========================
-       FOOTER
-  ========================== -->
-    <footer class="footer">
-      <div class="container footer-grid">
-        <div>
-          <img
-            src="assets/images/loogo.png"
-            alt="SunClean Logo"
-            class="footer-logo"
-          />
-          <p>
-            SunClean Tech delivers smart robotic solutions for efficient solar
-            panel cleaning. Maximizing energy output with sustainable,
-            low-maintenance operations.
-          </p>
-        </div>
+      <div class="grid three">
+        <!-- PRODUCT 11 -->
+        <a href="v1.html" class="product-link-card">
+          <div class="product-card">
+            <img src="assets/images/v1.png" alt="SunClean V1" />
+            <h3>SunClean Handy-V1</h3>
+            <p class="product-tag">Manual Cleaning Support System</p>
+            <button class="view-btn">View Details →</button>
+          </div>
+        </a>
 
-        <div>
-          <h4>Quick Links</h4>
-          <ul class="footer-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="technology.html">Technology</a></li>
-            <li><a href="roi-value.html">ROI & Value</a></li>
-            <li><a href="clients.html">Our Clients</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-          </ul>
-        </div>
+        <!-- PRODUCT 3 -->
+        <a href="v2.html" class="product-link-card">
+          <div class="product-card">
+            <img src="assets/images/v2.png" alt="SunClean V2" />
+            <h3>SunClean Portable – V2</h3>
+            <p class="product-tag">Semi-Automatic Portable Cleaning Robot</p>
+            <button class="view-btn">View Details →</button>
+          </div>
+        </a>
 
-        <div>
-          <h4>Contact</h4>
-          <p><i class="fas fa-phone"></i> +91 76666 37114</p>
-          <p><i class="fas fa-envelope"></i> sales@sunclean.in</p>
-          <p><i class="fas fa-map-marker-alt"></i> Pune, Maharashtra, India</p>
-        </div>
+        <!-- PRODUCT 4 -->
+        <a href="v4.html" class="product-link-card">
+          <div class="product-card">
+            <img src="assets/images/v4.png" alt="SunClean V4" />
+            <h3>SunClean Infinity – V4</h3>
+            <p class="product-tag">Fully-Automatic Robotic System</p>
+            <button class="view-btn">View Details →</button>
+          </div>
+        </a>
+
+        <!-- PRODUCT 5 -->
+        <a href="v5.html" class="product-link-card">
+          <div class="product-card">
+            <img src="assets/images/v5.png" alt="SunClean V5" />
+            <h3>SunClean Rail-Bot – V5</h3>
+            <p class="product-tag">Track based Cleaning Rail-Bot</p>
+            <button class="view-btn">View Details →</button>
+          </div>
+        </a>
+
+        <!-- PRODUCT 6 -->
+        <a href="v6.html" class="product-link-card">
+          <div class="product-card">
+            <img src="assets/images/v6.png" alt="SunClean V6" />
+            <h3>SunClean ACMC – V6</h3>
+            <p class="product-tag">Annual Cleaning Maintenance Contract</p>
+            <button class="view-btn">View Details →</button>
+          </div>
+        </a>
       </div>
-
-      <div class="footer-bottom">
+    </div>
+  </section>
+  <!-- =========================
+     FOOTER
+========================== -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <img src="assets/images/loogo.png" alt="SunClean Logo" class="footer-logo" />
         <p>
-          © <span id="currentYear"></span> SunClean Tech Private Limited. All
-          Rights Reserved.
+          SunClean Tech delivers smart robotic solutions for efficient solar
+          panel cleaning. Maximizing energy output with sustainable,
+          low-maintenance operations.
         </p>
-      </div>
-    </footer>
 
-    <script>
-      // dynamic year
-      document.getElementById("currentYear").innerHTML =
-        new Date().getFullYear();
-      // thumbnail switcher (simple demo)
-      const thumbs = document.querySelectorAll(".thumb");
-      const mainImg = document.getElementById("mainProductImage");
-      if (thumbs.length && mainImg) {
-        thumbs.forEach((thumb) => {
-          thumb.addEventListener("click", function () {
-            thumbs.forEach((t) => t.classList.remove("active-thumb"));
-            this.classList.add("active-thumb");
-            mainImg.src = this.src;
-          });
+        <!-- Social Media -->
+        <div style="margin-top: 20px; display: flex; gap: 15px; align-items: center;">
+          <a href="https://youtube.com/@suncleantech?si=v9-Mx_FS2zHpfdx9" target="_blank" rel="noopener noreferrer"
+            aria-label="SunClean Tech YouTube Channel" style="
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: #0a101b;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            text-decoration: none;
+            transition: 0.3s ease;
+          " onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="technology.html">Technology</a></li>
+          <li><a href="roi-value.html">ROI & Value</a></li>
+          <li><a href="clients.html">Our Clients</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+        <p><i class="fas fa-phone"></i> +91 76666 37114</p>
+        <p><i class="fas fa-envelope"></i> sales@sunclean.in</p>
+        <p><i class="fas fa-map-marker-alt"></i> Pune, Maharashtra, India</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>
+        © <span id="currentYear"></span> SunClean Tech Private Limited. All
+        Rights Reserved.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // dynamic year
+    document.getElementById("currentYear").innerHTML =
+      new Date().getFullYear();
+    // thumbnail switcher (simple demo)
+    const thumbs = document.querySelectorAll(".thumb");
+    const mainImg = document.getElementById("mainProductImage");
+    if (thumbs.length && mainImg) {
+      thumbs.forEach((thumb) => {
+        thumb.addEventListener("click", function () {
+          thumbs.forEach((t) => t.classList.remove("active-thumb"));
+          this.classList.add("active-thumb");
+          mainImg.src = this.src;
         });
-      }
-      // mobile menu toggle (simple)
-      const menuBtn = document.getElementById("menuBtn");
-      const navMenu = document.getElementById("navMenu");
-      if (menuBtn) {
-        menuBtn.addEventListener("click", () => {
-          if (navMenu.style.display === "flex") navMenu.style.display = "none";
-          else navMenu.style.display = "flex";
-        });
-      }
-      window.addEventListener("resize", () => {
-        if (window.innerWidth > 900 && navMenu) navMenu.style.display = "flex";
-        else if (
-          window.innerWidth <= 900 &&
-          navMenu &&
-          navMenu.style.display !== "flex"
-        )
-          navMenu.style.display = "none";
       });
-    </script>
-    <script src="js/script.js"></script>
-  </body>
+    }
+    // mobile menu toggle (simple)
+    const menuBtn = document.getElementById("menuBtn");
+    const navMenu = document.getElementById("navMenu");
+    if (menuBtn) {
+      menuBtn.addEventListener("click", () => {
+        if (navMenu.style.display === "flex") navMenu.style.display = "none";
+        else navMenu.style.display = "flex";
+      });
+    }
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 900 && navMenu) navMenu.style.display = "flex";
+      else if (
+        window.innerWidth <= 900 &&
+        navMenu &&
+        navMenu.style.display !== "flex"
+      )
+        navMenu.style.display = "none";
+    });
+  </script>
+  <script src="js/script.js"></script>
+</body>
+
 </html>
