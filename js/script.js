@@ -36,10 +36,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const heroTitle = document.getElementById("heroTitle");
 
   const heroTitles = [
-    "Next-Generation Solar Panel Cleaning Robots for Maximum Energy Output",
-    "Maximize Solar Output. Minimize Operational Effort",
-    "Intelligent Robotic Cleaning for the Next Era of Solar",
-    "Turn Cleaning into Measurable ROI",
+    "Intelligent Solutions for Solar Plant Operations & Maintenance",
+    "Intelligent Solutions for Solar Plant Operations & Maintenance",
+    "Intelligent Solutions for Solar Plant Operations & Maintenance",
+    "Intelligent Solutions for Solar Plant Operations & Maintenance",
   ];
 
   let currentSlide = 0;
@@ -83,6 +83,77 @@ document.addEventListener("DOMContentLoaded", () => {
         currentSlide = index;
         showSlide(currentSlide);
         resetSlider();
+      });
+    });
+  }
+
+  // =========================
+  // HERO RIGHT PRODUCT SLIDER
+  // =========================
+
+  const productSlides = document.querySelectorAll(".product-slide");
+  const productDots = document.querySelectorAll(".p-dot");
+  const nextBtn = document.querySelector(".next");
+  const prevBtn = document.querySelector(".prev");
+
+  let currentProduct = 0;
+  let productInterval;
+
+  function showProductSlide(index) {
+    if (!productSlides.length) return;
+
+    productSlides.forEach((slide) => slide.classList.remove("active"));
+
+    productDots.forEach((dot) => dot.classList.remove("active"));
+
+    productSlides[index].classList.add("active");
+
+    if (productDots[index]) {
+      productDots[index].classList.add("active");
+    }
+  }
+
+  function nextProductSlide() {
+    currentProduct = (currentProduct + 1) % productSlides.length;
+
+    showProductSlide(currentProduct);
+  }
+
+  function prevProductSlide() {
+    currentProduct =
+      (currentProduct - 1 + productSlides.length) % productSlides.length;
+
+    showProductSlide(currentProduct);
+  }
+
+  function startProductSlider() {
+    productInterval = setInterval(nextProductSlide, 3000);
+  }
+
+  function resetProductSlider() {
+    clearInterval(productInterval);
+    startProductSlider();
+  }
+
+  if (productSlides.length) {
+    showProductSlide(currentProduct);
+    startProductSlider();
+
+    nextBtn?.addEventListener("click", () => {
+      nextProductSlide();
+      resetProductSlider();
+    });
+
+    prevBtn?.addEventListener("click", () => {
+      prevProductSlide();
+      resetProductSlider();
+    });
+
+    productDots.forEach((dot, index) => {
+      dot.addEventListener("click", () => {
+        currentProduct = index;
+        showProductSlide(index);
+        resetProductSlider();
       });
     });
   }
