@@ -1,8 +1,14 @@
 // =========================================
-// SUN CLEAN TECH - FINAL FULL JS
+// SUN CLEAN TECH - FINAL FULL JS (CLEANED)
 // =========================================
 
 document.addEventListener("DOMContentLoaded", () => {
+  // =========================
+  // GLOBAL VARIABLES
+  // =========================
+  let typingInterval = null;
+  let currentTypingElement = null;
+
   // =========================
   // MOBILE NAVBAR TOGGLE
   // =========================
@@ -29,18 +35,50 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // =========================
-  // HERO SLIDER (HOME PAGE)
+  // TYPING ANIMATION FUNCTION
+  // =========================
+  function typeText(element, text, speed = 45, onComplete = null) {
+    if (typingInterval) {
+      clearInterval(typingInterval);
+      typingInterval = null;
+    }
+
+    if (currentTypingElement && currentTypingElement !== element) {
+      currentTypingElement.classList.remove("typing-cursor");
+    }
+
+    if (!element) return;
+
+    element.textContent = "";
+    element.classList.add("typing-cursor");
+    currentTypingElement = element;
+
+    let i = 0;
+    const fullText = text || "";
+
+    typingInterval = setInterval(() => {
+      if (i < fullText.length) {
+        element.textContent = fullText.substring(0, i + 1);
+        i++;
+      } else {
+        clearInterval(typingInterval);
+        typingInterval = null;
+
+        // cursor visible rahega
+        // element.classList.remove("typing-cursor");
+
+        if (onComplete && typeof onComplete === "function") {
+          onComplete();
+        }
+      }
+    }, speed);
+  }
+
+  // =========================
+  // HERO SLIDER (HOME PAGE) - OPTIONAL
   // =========================
   const slides = document.querySelectorAll(".hero-slide");
   const dots = document.querySelectorAll(".hero-dots .dot");
-  const heroTitle = document.getElementById("heroTitle");
-
-  const heroTitles = [
-    "Intelligent Solutions for Solar Plant Operations & Maintenance",
-    "Intelligent Solutions for Solar Plant Operations & Maintenance",
-    "Intelligent Solutions for Solar Plant Operations & Maintenance",
-    "Intelligent Solutions for Solar Plant Operations & Maintenance",
-  ];
 
   let currentSlide = 0;
   let sliderInterval;
@@ -53,8 +91,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (slides[index]) slides[index].classList.add("active");
     if (dots[index]) dots[index].classList.add("active");
-    if (heroTitle && heroTitles[index])
-      heroTitle.textContent = heroTitles[index];
   }
 
   function nextSlide() {
@@ -88,13 +124,24 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // =========================
-  // HERO RIGHT PRODUCT SLIDER
+  // PRODUCT SLIDER WITH TYPING ANIMATION
   // =========================
 
+  const heroTitle = document.getElementById("heroTitle");
   const productSlides = document.querySelectorAll(".product-slide");
   const productDots = document.querySelectorAll(".p-dot");
   const nextBtn = document.querySelector(".next");
   const prevBtn = document.querySelector(".prev");
+
+  // Only product titles - heroTitles REMOVED
+  const productTitles = [
+    "Increase Energy Generation. Reduce Cleaning Costs",
+    "Automate Vegetation Management Across Large Solar Parks",
+    "24×7 Intelligent Monitoring for Critical Solar Assets",
+    "Identify Hidden Faults Before They Affect Plant Performance",
+    "Transform Solar Inspections Through Aerial Intelligence",
+    "Precision Environmental Data for Smarter Solar Operations",
+  ];
 
   let currentProduct = 0;
   let productInterval;
@@ -103,35 +150,36 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!productSlides.length) return;
 
     productSlides.forEach((slide) => slide.classList.remove("active"));
-
     productDots.forEach((dot) => dot.classList.remove("active"));
 
-    productSlides[index].classList.add("active");
+    if (productSlides[index]) productSlides[index].classList.add("active");
+    if (productDots[index]) productDots[index].classList.add("active");
 
-    if (productDots[index]) {
-      productDots[index].classList.add("active");
+    // Typing animation on hero title
+    if (heroTitle && productTitles[index]) {
+      heroTitle.textContent = "";
+      typeText(heroTitle, productTitles[index], 45);
     }
   }
 
   function nextProductSlide() {
     currentProduct = (currentProduct + 1) % productSlides.length;
-
     showProductSlide(currentProduct);
   }
 
   function prevProductSlide() {
     currentProduct =
       (currentProduct - 1 + productSlides.length) % productSlides.length;
-
     showProductSlide(currentProduct);
   }
 
   function startProductSlider() {
-    productInterval = setInterval(nextProductSlide, 3000);
+    if (productInterval) clearInterval(productInterval);
+    productInterval = setInterval(nextProductSlide, 4000);
   }
 
   function resetProductSlider() {
-    clearInterval(productInterval);
+    if (productInterval) clearInterval(productInterval);
     startProductSlider();
   }
 
@@ -139,15 +187,19 @@ document.addEventListener("DOMContentLoaded", () => {
     showProductSlide(currentProduct);
     startProductSlider();
 
-    nextBtn?.addEventListener("click", () => {
-      nextProductSlide();
-      resetProductSlider();
-    });
+    if (nextBtn) {
+      nextBtn.addEventListener("click", () => {
+        nextProductSlide();
+        resetProductSlider();
+      });
+    }
 
-    prevBtn?.addEventListener("click", () => {
-      prevProductSlide();
-      resetProductSlider();
-    });
+    if (prevBtn) {
+      prevBtn.addEventListener("click", () => {
+        prevProductSlide();
+        resetProductSlider();
+      });
+    }
 
     productDots.forEach((dot, index) => {
       dot.addEventListener("click", () => {
@@ -155,6 +207,21 @@ document.addEventListener("DOMContentLoaded", () => {
         showProductSlide(index);
         resetProductSlider();
       });
+    });
+  }
+
+  // =========================
+  // HEADER SCROLL EFFECT
+  // =========================
+  const header = document.querySelector(".header");
+
+  if (header) {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 50) {
+        header.classList.add("scrolled");
+      } else {
+        header.classList.remove("scrolled");
+      }
     });
   }
 
@@ -252,7 +319,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // =========================
-  // SIMPLE SCROLL REVEAL EFFECT
+  // SCROLL REVEAL EFFECT
   // =========================
   const revealElements = document.querySelectorAll(
     ".info-card, .glass-card, .mini-card, .product-card, .profile-card, .timeline-item, .contact-info-item, .result-card",
