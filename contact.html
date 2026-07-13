@@ -230,7 +230,7 @@
 
           <div class="form-group">
             <label>Additional Requirement *</label>
-            <textarea name="message" rows="5"></textarea>
+            <textarea name="message" rows="5" required></textarea>
           </div>
 
           <button type="submit" class="btn btn-primary">
@@ -414,7 +414,6 @@
       const installation = form.installation.value;
       const capacity = form.capacity.value;
       const products = form.products.value;
-      const water = form.water.value;
       const timeline = form.timeline.value;
       const message = form.message.value;
 
@@ -433,7 +432,6 @@ Location: ${location}
 Installation Type: ${installation}
 Capacity: ${capacity}
 Product: ${products}
-Water: ${water}
 Timeline: ${timeline}
 
 Message:
