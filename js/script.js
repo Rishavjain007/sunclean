@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // =========================
   // TYPING ANIMATION FUNCTION
   // =========================
-  function typeText(element, text, speed = 45, onComplete = null) {
+  function typeText(element, text, speed = 80, onComplete = null) {
     if (typingInterval) {
       clearInterval(typingInterval);
       typingInterval = null;
@@ -135,12 +135,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Only product titles - heroTitles REMOVED
   const productTitles = [
-    "Increase Energy Generation. Reduce Cleaning Costs",
-    "Automate Vegetation Management Across Large Solar Parks",
-    "24×7 Intelligent Monitoring for Critical Solar Assets",
-    "Identify Hidden Faults Before They Affect Plant Performance",
-    "Transform Solar Inspections Through Aerial Intelligence",
-    "Precision Environmental Data for Smarter Solar Operations",
+    // "Increase Energy Generation. Reduce Cleaning Costs",
+    // "Automate Vegetation Management Across Large Solar Parks",
+    // "24×7 Intelligent Monitoring for Critical Solar Assets",
+    // "Identify Hidden Faults Before They Affect Plant Performance",
+    // "Transform Solar Inspections Through Aerial Intelligence",
+    // "Precision Environmental Data for Smarter Solar Operations",
+    "Solar Cleaning Robots",
+    "Grass Cutter Robots",
+    "Security Robots",
+    "Thermography Drones",
+    "Inspection Drones",
+    "Weather Monitoring System",
   ];
 
   let currentProduct = 0;
@@ -158,7 +164,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Typing animation on hero title
     if (heroTitle && productTitles[index]) {
       heroTitle.textContent = "";
-      typeText(heroTitle, productTitles[index], 45);
+      typeText(heroTitle, productTitles[index], 80);
     }
   }
 
@@ -175,7 +181,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function startProductSlider() {
     if (productInterval) clearInterval(productInterval);
-    productInterval = setInterval(nextProductSlide, 4000);
+    productInterval = setInterval(nextProductSlide, 7000);
   }
 
   function resetProductSlider() {
